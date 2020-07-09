@@ -20,6 +20,10 @@ class CreateContentsTable extends Migration
             $table->string('subtitle');
             $table->mediumText('content')->nullable();
             $table->timestamp('date')->nullable();
+            $table->bigInteger('category_id')->unsigned();
+            $table->foreign('category_id')->references('id')->on('categories');
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

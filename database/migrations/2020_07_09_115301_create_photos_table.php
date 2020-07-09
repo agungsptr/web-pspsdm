@@ -17,8 +17,8 @@ class CreatePhotosTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('photo', 255)->nullable();
-            $table->bigInteger('photo_id')->unsigned();
-            $table->foreign('photo_id')->references('id')->on('contents');
+            $table->bigInteger('content_id')->unsigned();
+            $table->foreign('content_id')->references('id')->on('contents');
         });
     }
 

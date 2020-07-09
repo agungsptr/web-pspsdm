@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Category;
+use App\Model\Content;
+use App\Model\Photo;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -13,7 +16,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        return view('post.index');
     }
 
     /**
@@ -23,7 +26,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        return view('post.create', ["categories" => $categories]);
     }
 
     /**
@@ -34,7 +38,27 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Content;
+        $post->title = $request->get('title');
+        $post->subtitle = $request->get('subtitle');
+        $post->date = $request->get('date');
+        $post->content = $request->get('content');
+        $post->category_id = $request->get('category_id');
+        $post->user_id = $request->get('user_id');
+        $post->save();
+
+        // for ($i = 1; $i <= 3; $i++) {
+        if ($request->file("photo_1")) {
+            $photo = new Photo;
+            $dir = "Foto/";
+            $file = $request->file("photo_1")->store($dir, 'public');
+            $photo->photo = $file;
+            $photo->content_id = $post->id;
+            $photo->save();
+        }
+        // }
+
+        return redirect()->route('post.create')->with('status', "Post $post->title berhasil ditambahkan");
     }
 
     /**

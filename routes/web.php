@@ -25,12 +25,17 @@ Route::match(["GET", "POST"], "/register", function(){
 });
 
 Route::group(['prefix' => 'admin'], function () {
+    Route::get('/', function () {
+        return redirect()->route("post.index");
+    });
     Route::resource('user', 'UserController');
     Route::resource('category', 'CategoryController');
+    Route::resource('post', 'PostController');
 });
 
 
 Route::group(['prefix' => 'getdata'], function () {
     Route::get('user', 'DataTableController@getUser')->name('getdata.user');
     Route::get('category', 'DataTableController@getCategory')->name('getdata.category');
+    Route::get('post', 'DataTableController@getPost')->name('getdata.post');
 });

@@ -100,7 +100,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link @yield('menu-post-daftar')">
+                                    <a href="{{ route('post.index') }}" class="nav-link @yield('menu-post-daftar')">
                                         <i class="fas fa-list nav-icon"></i>
                                         <p>Daftar Post</p>
                                     </a>
@@ -108,13 +108,14 @@
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link @yield('menu-post-tambah')">
+                                    <a href="{{ route('post.create') }}" class="nav-link @yield('menu-post-tambah')">
                                         <i class="fas fa-plus nav-icon"></i>
                                         <p>Tambah Post</p>
                                     </a>
                                 </li>
                             </ul>
                         </li>
+                        <br>
                         <li class="nav-item has-treeview menu-open">
                             <a href="#" class="nav-link @yield('menu-kategori')">
                                 <i class="nav-icon fas fa-notes-medical"></i>
