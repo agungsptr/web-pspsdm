@@ -1,18 +1,18 @@
 @extends('layouts.admin')
 
 @section('title')
-Manajemen Post
-@endsection
-
-@section('title-card')
 Kategori Post
 @endsection
 
-@section('menu-post')
+@section('title-card')
+Daftar Kategori
+@endsection
+
+@section('menu-kategori')
 active
 @endsection
 
-@section('menu-post-kategori')
+@section('menu-kategori-daftar')
 active
 @endsection
 
@@ -41,8 +41,7 @@ active
         <table class="table table-striped table-bordered table-hover" style="width:100%" id="table_id">
             <thead>
                 <tr>
-                    <th>Nama</th>
-                    <th>Username</th>
+                    <th>Kategori</th>
                     <th style="width: 165px">Action</th>
                 </tr>
             </thead>
@@ -57,7 +56,7 @@ active
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Delete User</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Delete Kategori</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -82,10 +81,9 @@ active
         var table = $('#table_id').DataTable({
             processing:true,
             serverside:true,
-            ajax:"{{ route('getdata.user') }}",
+            ajax:"{{ route('getdata.category') }}",
             columns:[
-                {data:'name'},
-                {data:'username'},
+                {data:'category'},
                 {data:'aksi', sortable:false},
             ],
         });
@@ -97,7 +95,7 @@ active
 
             var tr = $(this).closest('tr');
             var row = table.row(tr).data();
-            document.getElementById('modal-body').innerHTML = 'Apakah anda yakin menghapus user <strong>' + row.name + '</strong> ?';
+            document.getElementById('modal-body').innerHTML = 'Apakah anda yakin menghapus kategori <strong>' + row.category + '</strong> ?';
         });
     });
 </script>

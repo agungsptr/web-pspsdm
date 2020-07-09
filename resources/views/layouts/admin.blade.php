@@ -100,8 +100,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#"
-                                        class="nav-link @yield('menu-post-daftar')">
+                                    <a href="#" class="nav-link @yield('menu-post-daftar')">
                                         <i class="fas fa-list nav-icon"></i>
                                         <p>Daftar Post</p>
                                     </a>
@@ -109,19 +108,36 @@
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#"
-                                        class="nav-link @yield('menu-post-tambah')">
+                                    <a href="#" class="nav-link @yield('menu-post-tambah')">
                                         <i class="fas fa-plus nav-icon"></i>
                                         <p>Tambah Post</p>
                                     </a>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="nav-item has-treeview menu-open">
+                            <a href="#" class="nav-link @yield('menu-kategori')">
+                                <i class="nav-icon fas fa-notes-medical"></i>
+                                <p>
+                                    Kategori Post
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#"
-                                        class="nav-link @yield('menu-post-kategori')">
+                                    <a href="{{ route('category.index') }}"
+                                        class="nav-link @yield('menu-kategori-daftar')">
                                         <i class="fas fa-list-alt nav-icon"></i>
-                                        <p>Kategori Post</p>
+                                        <p>Daftar Kategori</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('category.create') }}"
+                                        class="nav-link @yield('menu-kategori-tambah')">
+                                        <i class="fas fa-plus nav-icon"></i>
+                                        <p>Tambah Kategori</p>
                                     </a>
                                 </li>
                             </ul>
@@ -147,8 +163,7 @@
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{route('user.create')}}"
-                                        class="nav-link @yield('menu-user-tambah')">
+                                    <a href="{{route('user.create')}}" class="nav-link @yield('menu-user-tambah')">
                                         <i class="fas fa-plus nav-icon"></i>
                                         <p>Tambah User</p>
                                     </a>

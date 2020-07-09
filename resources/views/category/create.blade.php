@@ -1,18 +1,18 @@
 @extends('layouts.admin')
 
 @section('title')
-Manajemen Post
-@endsection
-
-@section('title-card')
 Kategori Post
 @endsection
 
-@section('menu-post')
+@section('title-card')
+Tambah Kategori
+@endsection
+
+@section('menu-kategori')
 active
 @endsection
 
-@section('menu-post-kategori')
+@section('menu-kategori-tambah')
 active
 @endsection
 
@@ -29,43 +29,13 @@ active
         </div>
         @endif
 
-        <form action="{{ route('user.store') }}" method="POST">
+        <form action="{{ route('category.store') }}" method="POST">
             @csrf
             <div class="form-group">
-                <label for="">Nama</label>
-                <input name="name" type="text" class=" form-control {{$errors->first('name') ? 'is-invalid':''}}"
-                    value="{{old('name')}}" maxlength="190" minlength="3" required>
-                @error('name')
-                <div class="invalid-feedback">
-                    {{$message}}
-                </div>
-                @enderror
-            </div>
-            <div class="form-group">
-                <label for="">Username</label>
-                <input name="username" type="text" class="form-control {{$errors->first('username') ? 'is-invalid':''}}"
-                    value="{{old('username')}}" required maxlength="190" minlength="3">
-                @error('username')
-                <div class="invalid-feedback">
-                    {{$message}}
-                </div>
-                @enderror
-            </div>
-            <div class="form-group">
-                <label for="">Password</label>
-                <input name="password" type="password"
-                    class="form-control {{$errors->first('password') ? 'is-invalid':''}}" required minlength="6" maxlength="190">
-                @error('password')
-                <div class="invalid-feedback">
-                    {{$message}}
-                </div>
-                @enderror
-            </div>
-            <div class="form-group">
-                <label for="">Konfirmasi Password</label>
-                <input name="password_conf" type="password"
-                    class="form-control {{$errors->first('password_conf') ? 'is-invalid':''}}" required minlength="6" maxlength="190">
-                @error('password_conf')
+                <label for="">Kategori</label>
+                <input name="category" type="text" class=" form-control {{$errors->first('category') ? 'is-invalid':''}}"
+                    value="{{old('category')}}" maxlength="190" minlength="3" required>
+                @error('category')
                 <div class="invalid-feedback">
                     {{$message}}
                 </div>

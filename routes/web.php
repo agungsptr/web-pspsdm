@@ -32,4 +32,5 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::group(['prefix' => 'getdata'], function () {
     Route::get('user', 'DataTableController@getUser')->name('getdata.user');
+    Route::get('category', 'DataTableController@getCategory')->name('getdata.category');
 });
