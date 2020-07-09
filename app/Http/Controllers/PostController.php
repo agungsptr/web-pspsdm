@@ -38,6 +38,23 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate(
+            [
+                'title' => "required",
+                'date' => "required",
+                'content' => "required",
+                'category_id' => "required",
+                'user_id' => "required",
+            ],
+            [
+                'title.required' => 'Judul harus diisi',
+                'date.required' => 'Tanggal harus diisi',
+                'content.required' => 'Konten harus diisi',
+                'category.required' => 'Kategori harus diisi',
+                'user_id.required' => 'User harus diisi login',
+            ]
+        );
+
         $post = new Content;
         $post->title = $request->get('title');
         $post->subtitle = $request->get('subtitle');
@@ -47,16 +64,16 @@ class PostController extends Controller
         $post->user_id = $request->get('user_id');
         $post->save();
 
-        // for ($i = 1; $i <= 3; $i++) {
-        if ($request->file("photo_1")) {
-            $photo = new Photo;
-            $dir = "Foto/";
-            $file = $request->file("photo_1")->store($dir, 'public');
-            $photo->photo = $file;
-            $photo->content_id = $post->id;
-            $photo->save();
+        for ($i = 1; $i <= 3; $i++) {
+            if ($request->file("photo_1")) {
+                $photo = new Photo;
+                $dir = "Foto/";
+                $file = $request->file("photo_1")->store($dir, 'public');
+                $photo->photo = $file;
+                $photo->content_id = $post->id;
+                $photo->save();
+            }
         }
-        // }
 
         return redirect()->route('post.create')->with('status', "Post $post->title berhasil ditambahkan");
     }

@@ -46,7 +46,7 @@ active
                 <label for="">Sub Judul</label>
                 <input name="subtitle" type="text"
                     class=" form-control {{$errors->first('subtitle') ? 'is-invalid':''}}" value="{{old('subtitle')}}"
-                    maxlength="190" minlength="3" required>
+                    maxlength="190" minlength="3">
                 @error('subtitle')
                 <div class="invalid-feedback">
                     {{$message}}
@@ -55,7 +55,13 @@ active
             </div>
             <div class="form-group">
                 <label for="">Tanggal</label>
-                <input type="datetime-local" required class="form-control" name="date">
+                <input type="datetime-local" required class="form-control {{$errors->first('date') ? 'is-invalid':''}}"
+                    name="date">
+                @error('date')
+                <div class="invalid-feedback">
+                    {{$message}}
+                </div>
+                @enderror
             </div>
             <div class="form-group">
                 <label for="">Kategori</label>
@@ -69,6 +75,11 @@ active
                     <option value="">Anda belum membuat kategori</option>
                     @endif
                 </select>
+                @error('category_id')
+                <div class="invalid-feedback">
+                    {{$message}}
+                </div>
+                @enderror
             </div>
             <div class="form-group">
                 <label for="">Foto 1</label>
