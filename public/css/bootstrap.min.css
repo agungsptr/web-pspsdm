@@ -4686,7 +4686,8 @@ input[type=submit].btn-block {
 }
 
 .navbar-light .navbar-brand {
-    color: rgba(0, 0, 0, .9)
+    color: rgba(0, 0, 0, .9);
+    font-weight: bold;
 }
 
 .navbar-light .navbar-brand:focus,
@@ -4711,7 +4712,9 @@ input[type=submit].btn-block {
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show>.nav-link {
-    color: rgba(0, 0, 0, .9)
+    color: #55CC0C;
+    font-weight: bold;
+
 }
 
 .navbar-light .navbar-toggler {
@@ -6630,7 +6633,7 @@ button.bg-danger:hover {
 }
 
 .bg-light {
-    background-color: #f8f9fa !important
+    background-color: #ffffff !important
 }
 
 a.bg-light:focus,
