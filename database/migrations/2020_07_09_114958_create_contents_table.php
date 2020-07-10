@@ -16,8 +16,8 @@ class CreateContentsTable extends Migration
         Schema::create('contents', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('title')->nullable();
-            $table->string('subtitle');
+            $table->string('title');
+            $table->string('subtitle')->nullable();
             $table->mediumText('content')->nullable();
             $table->timestamp('date')->nullable();
             $table->bigInteger('category_id')->unsigned();
