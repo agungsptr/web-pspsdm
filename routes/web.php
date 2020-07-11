@@ -17,7 +17,7 @@ Auth::routes();
 
 Route::get('/', function () {
     return view('home.index');
-});
+})->name('home');
 
 // disable route '/register'
 Route::match(["GET", "POST"], "/register", function(){
@@ -37,4 +37,16 @@ Route::group(['prefix' => 'getdata'], function () {
     Route::get('user', 'DataTableController@getUser')->name('getdata.user');
     Route::get('category', 'DataTableController@getCategory')->name('getdata.category');
     Route::get('post', 'DataTableController@getPost')->name('getdata.post');
+});
+
+
+Route::group(['prefix' => '/'], function () {
+    Route::get('sejarah', function (){
+        return view('home.sejarah');
+    })->name('home.sejarah');
+    
+    Route::get('visi-misi', function (){
+        return view('home.visi-misi');
+    })->name('home.visi-misi');
+
 });
