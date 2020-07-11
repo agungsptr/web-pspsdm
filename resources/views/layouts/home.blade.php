@@ -25,10 +25,10 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item @yield('home-active')">
                         <a class="nav-link" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown @yield('tentangkami-active')">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Tentang Kami
@@ -77,7 +77,17 @@
                                 <a class="nav-link text-white" href="#">
                                     <span class="media align-items-center">
                                         <i class="fa  fa-phone-alt mr-2"></i>
-                                        <span class="media-body">+62 85 338 9948 64</span>
+                                        <span class="media-body">+62 817 5780 009</span>
+                                    </span>
+                                </a>
+                            </li>
+                            {{-- end sublink --}}
+                            {{-- sub link --}}
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">
+                                    <span class="media align-items-center">
+                                        <i class="fa  fa-paper-plane mr-2"></i>
+                                        <span class="media-body">pspsdm.lombok@gmail.com</span>
                                     </span>
                                 </a>
                             </li>
@@ -87,16 +97,28 @@
                                 <a class="nav-link text-white" href="#">
                                     <span class="media align-items-center">
                                         <i class="fa  fa-map-marker-alt mr-2"></i>
-                                        <span class="media-body">Jl. madiun No 14 Kr baru mataram</span>
+                                        <span class="media-body">Jl. Madiun 14 BTN Taman Baru - Mataram, NTB</span>
                                     </span>
                                 </a>
                             </li>
                             {{-- end sublink --}}
+                        </ul>
+                        <!-- End Nav Link -->
+                    </div>
+                    {{-- </div> --}}
+
+                    {{-- <div class="col-lg-3 ml-lg-auto mb-5 mb-lg-0"> --}}
+                    <div class="col-6 col-md-3 col-lg mb-5 mb-lg-0">
+                        <h5 class="text-white">Social media</h5>
+                        <!-- Nav Link -->
+                        <ul class="nav nav-sm nav-x-0 nav-white flex-column">
                             {{-- sub link --}}
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="#">
-                                    Social media :
-                                    <i class="nav-icon fa-facebook"></i>
+                                    <span class="media align-items-center">
+                                        <i class="fab  fa-instagram fa-2x mr-2"></i>
+                                        <i class="fab  fa-facebook fa-2x mr-2"></i>
+                                    </span>
                                 </a>
                             </li>
                             {{-- end sublink --}}

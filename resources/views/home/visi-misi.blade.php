@@ -1,5 +1,7 @@
 @extends('layouts.home')
-
+@section('tentangkami-active')
+active
+@endsection
 @section('header')
 {{-- slider --}}
 <img src="{{ asset('images/slider1.png') }}" class="img-fluid" alt="Responsive image">\
@@ -21,16 +23,15 @@
                 <p><span style="color: #000000;">
                                 <ul id="datalist" class="point-list">
                                         <li class="point-list"><span style="color: #000000;">Meningkatkan kualitas hidup
-                                                        dan pendapatan
-                                                        masyarakat melalui kegiatan mobilisasi sumber daya yang mereka
-                                                        miliki.</span>
+                                                        dan pendapatan masyarakat melalui kegiatan mobilisasi sumber
+                                                        daya yang mereka miliki.</span>
                                         </li>
                                         <li class="point-list"><span style="color: #000000;">Meningkatkan mutu peran
                                                         serta masyarakat dalam pembangunan kesejahteraan berbangsa dan
                                                         bernegara berdasarkan keswadayaan dan kemandirian.</span>
                                         </li>
                                         <li class="point-list"><span style="color: #000000;">Mendorong kesinambungan
-                                                        semangat kebersamaan, keterbukaan dan kementrian yang sudah
+                                                        semangat kebersamaan, keterbukaan dan kemitraan yang sudah
                                                         terjalin dengan baik antara masyarakat dan pemerintah.</span>
                                         </li>
                                         <li class="point-list"><span style="color: #000000;">Sebagai pusat informasi,
@@ -43,57 +44,16 @@
                 <p class="font-body font-justify"><span style="color: #000000;"><strong><span
                                                 class="font-body-title"><strong>MISI</strong></span></strong></span></p>
                 <div class="font-body font-justify">
-                        <span style="color: #000000;">Untuk mencapai tujuan organisasi, PSPSDM menyediakan dan mempunyai
-                                ruang
-                                lingkup kegiatan sebagai berikut :</span>
-                        <ol type="a" id="datalist" class="list misi">
-                                {{-- list :a --}}
-                                <li class="point-list"><span style="color: #000000;">Menyelenggarakan kegiatan
-                                                pengembangan dan peningkatan keswadayaan masyarakat melalui
-                                                program</span>
-                                        <ul type="disc" id="datalist" class="point-list">
-                                                <li class="point-list"><span style="color: #000000;">Agroforestry /
-                                                                pertanian
-                                                                berkelanjutan (terutama pengembangan pertanian lahan
-                                                                kering /
-                                                                miring).</span>
-                                                </li>
-                                                <li class="point-list"><span style="color: #000000;">Hutan
-                                                                Kemasyarakatan.</span>
-                                                </li>
-                                                <li class="point-list"><span style="color: #000000;">Kesehatan
-                                                                masyarakat (program kesehatan ibu anak dan dana
-                                                                sehat).</span>
-                                                </li>
-                                                <li class="point-list"><span style="color: #000000;">Peningkatan
-                                                                pendapatan.</span>
-                                                <li class="point-list"><span style="color: #000000;">Penyediaan saranan
-                                                                air bersih dan sanitasi.</span>
-                                                <li class="point-list"><span style="color: #000000;">Program padat
-                                                                karya.</span>
-                                                <li class="point-list"><span style="color: #000000;">Pengembangan peran
-                                                                wanita melalui pendidikan keaksaraan fungsional.</span>
-                                                </li>
-                                        </ul>
-                                </li>
-                                {{-- end list :a --}}
-                                {{-- list :b --}}
-                                <li class="point-list">
-                                        <span style="color: #000000;">
-                                                Menyelenggarakan kegiatan pengembangan sumber daya manusia dan
-                                                peningkatan kemampuan kelembagaan melalui
-                                        </span>
-                                        <ul type="disc" id="datalist" class="point-list">
-                                                <li class="point-list"><span style="color: #000000;">Kegiatan pelatihan
-                                                                keterampilan, penelitian seminar, lokakarya dan
-                                                                kunjungan silang.</span>
-                                                </li>
-                                                <li class="point-list"><span style="color: #000000;">Pelayanan
-                                                                konsultasi di bidang pemberdayaan masyarakat.</span>
-                                                </li>
-                                        </ul>
-                                </li>
-                        </ol>
+                        <span style="color: #000000;">
+                                Menyelenggarakan kegiatan pengembangan dan peningkatan keswadayaan masyarakat melalui
+                                program agroforestry / pertanian berkelanjutan, hutan kemasyarakatan, kesehatan
+                                masyarakat, penyediaan sarana air bersih dan sanitasi, pengembangan peran wanita melalui
+                                pendidikan keaksaraan fungsional, peningkatan pendapatan dan program padat karya.
+                                Menyelenggarakan kegiatan pengembangan sumber daya manusia dan peningkatan kemampuan
+                                kelembagaan melalui kegiatan pelatihan, keterampilan, penelitian, seminar, lokakarya dan
+                                studi banding.
+                        </span>
+                        <p>&nbsp;</p>
                 </div>
         </div>
 </div>
