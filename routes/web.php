@@ -33,6 +33,11 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('post', 'PostController');
 });
 
+Route::group(['prefix' => 'post'], function () {
+    Route::get('category/{category}', 'PostDetailController@byCategory')->name('post.bycategory');
+    Route::get('id/{id}', 'PostDetailController@byId')->name('post.byid');
+});
+
 Route::group(['prefix' => 'getdata'], function () {
     Route::get('user', 'DataTableController@getUser')->name('getdata.user');
     Route::get('category', 'DataTableController@getCategory')->name('getdata.category');
