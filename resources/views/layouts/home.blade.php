@@ -63,69 +63,90 @@
 
 
     {{-- Footer --}}
+
     <footer class="bg-green">
         <div class="container">
             <div class="space-top-2 space-bottom-1 space-bottom-lg-2">
                 <div class="row justify-content-lg-between">
-                    {{-- <div class="col-lg-3 ml-lg-auto mb-5 mb-lg-0"> --}}
-                    <div class="col-6 col-md-3 col-lg mb-5 mb-lg-0">
-                        <h5 class="text-white">Contact Us</h5>
-                        <!-- Nav Link -->
-                        <ul class="nav nav-sm nav-x-0 nav-white flex-column">
-                            {{-- sub link --}}
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">
-                                    <span class="media align-items-center">
-                                        <i class="fa  fa-phone-alt mr-2"></i>
-                                        <span class="media-body">+62 817 5780 009</span>
+                    {{-- col-6 col-md-3 col-lg mb-5 mb-lg-0 --}}
+                    <div class="col-lg-5 col-md-3 col-lg mb-5 mb-lg-0">
+                        <ul class="list-group list-group-flush text-white">
+                            <div class="widget-title alt-font text-white text-small text-medium-gray text-uppercase margin-20px-bottom font-weight-600 follow-us font-body-title"
+                                style="font-family:PFDinTextCompPro-Medium;font-size:16px; font-weight: normal;">
+                                Informasi</div>
+                            <small>&nbsp;</small>
+                            <li class="list-unstyled"> <span class="media">
+                                    <span class="fas fa-location-arrow mt-1 mr-2"></span>
+                                    <span class="media-body">
+                                        Jl. Madiun 14 BTN Taman Baru - Mataram, NTB
                                     </span>
-                                </a>
-                            </li>
-                            {{-- end sublink --}}
-                            {{-- sub link --}}
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">
-                                    <span class="media align-items-center">
-                                        <i class="fa  fa-paper-plane mr-2"></i>
-                                        <span class="media-body">pspsdm.lombok@gmail.com</span>
+                                </span></li>
+                            <li class="list-unstyled"> <span class="media">
+                                    <span class="fas fa-phone-alt mt-1 mr-2"></span>
+                                    <span class="media-body">
+                                        +628 175 78 0009
                                     </span>
-                                </a>
-                            </li>
-                            {{-- end sublink --}}
-                            {{-- sub link --}}
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">
-                                    <span class="media align-items-center">
-                                        <i class="fa  fa-map-marker-alt mr-2"></i>
-                                        <span class="media-body">Jl. Madiun 14 BTN Taman Baru - Mataram, NTB</span>
+                                </span></li>
+                            <li class="list-unstyled"> <span class="media">
+                                    <span class="fas fa-paper-plane mt-1 mr-2"></span>
+                                    <span class="media-body">
+                                        pspsdm.lombok@gmail.com
                                     </span>
-                                </a>
-                            </li>
-                            {{-- end sublink --}}
+                                </span></li>
                         </ul>
-                        <!-- End Nav Link -->
                     </div>
-                    {{-- </div> --}}
+                    {{-- end col-6 col-md-3 col-lg mb-5 mb-lg-0 --}}
 
-                    {{-- <div class="col-lg-3 ml-lg-auto mb-5 mb-lg-0"> --}}
-                    <div class="col-6 col-md-3 col-lg mb-5 mb-lg-0">
-                        <h5 class="text-white">Social media</h5>
-                        <!-- Nav Link -->
-                        <ul class="nav nav-sm nav-x-0 nav-white flex-column">
-                            {{-- sub link --}}
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">
-                                    <span class="media align-items-center">
-                                        <i class="fab  fa-instagram fa-2x mr-2"></i>
-                                        <i class="fab  fa-facebook fa-2x mr-2"></i>
-                                    </span>
-                                </a>
+                    {{-- col-6 col-md-3 col-lg mb-5 mb-lg-0 --}}
+                    <div class="col-lg-4 col-md-3 col-lg mb-5 mb-lg-0">
+                        <ul class="list-group list-group-flush text-white"
+                            style="font-family:PFDinTextCompPro-Medium;font-size:16px; font-weight: normal;">
+                            <li class="list-unstyled">
+                                <a href="" class="text-white">TENTANG KAMI</a>
                             </li>
-                            {{-- end sublink --}}
+                            <small>&nbsp;</small>
+                            <li class="list-unstyled">
+                                <a href="" class="text-white">GALERY</a>
+                            </li>
+                            <small>&nbsp;</small>
+                            <li class="list-unstyled">
+                                <a href="" class="text-white">PROGRAM</a>
+                            </li>
                         </ul>
-                        <!-- End Nav Link -->
                     </div>
-                    {{-- </div> --}}
+                    {{-- end col-6 col-md-3 col-lg mb-5 mb-lg-0 --}}
+
+                    {{-- col-6 col-md-3 col-lg mb-5 mb-lg-0 --}}
+                    <div class="col-lg-3 col-md-3 col-lg mb-5 mb-lg-0 text-center">
+                        <div class="widget-title alt-font text-white text-small text-medium-gray text-uppercase margin-20px-bottom font-weight-600 follow-us font-body-title"
+                            style="font-family:PFDinTextCompPro-Medium;font-size:16px; font-weight: normal;">
+                            DIREKTUR PSPSDM</div>
+                        <small>&nbsp;</small>
+                        <div class="text-center">
+                            <img src="{{ asset('images/img_profile.jpeg') }}" width="150px" height="200px">
+                        </div>
+                        </ul>
+                    </div>
+                    {{-- end col-6 col-md-3 col-lg mb-5 mb-lg-0 --}}
+                </div>
+            </div>
+            <hr class="opacity-xs my-0" style="border-color: white">
+            <br>
+            <div class="space-1">
+                <div class="row align-items-md-center mb-7">
+                    <div class="col-md-9 mb-4 mb-md-0">
+                        <span class="text-white">© 2020 Pusat Study Dan Pengembangan Sumber Daya Manusia</span>
+                    </div>
+                    <div class="col-md-3 text-md-right">
+                        <ul class="list-group list-group-horizontal-sm ">
+                            <li class="list-unstyled m-auto">
+                                <a href="https://www.facebook.com/" class="text-white"><span
+                                        class="fab fa-facebook fa-2x mt-1 mr-2"></span></a>
+                                <a href="instagram.com" class="text-white"><span
+                                        class="fab fa-instagram fa-2x mt-1 mr-2"></span></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
