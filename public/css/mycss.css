@@ -10,9 +10,15 @@
                                                 left: 0;
                                             }
 
+                                            
                                             .text-white {
                                                 color: rgb(255, 255, 255)!important; 
                                             }
+
+                                            /* .font-family {
+                                                
+                                                
+                                            } */
 
                                             @media (min-width: 992px) {
                                                 .navbar {

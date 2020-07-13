@@ -4,11 +4,11 @@ active
 @endsection
 @section('header')
 {{-- slider --}}
-<img src="{{ asset('images/header.png') }}" class="img-fluid" alt="Responsive image">
+<img src="{{ asset('images/Header1.png') }}" class="img-fluid" alt="Responsive image">
 <p>&nbsp;</p>
 <div class="container">
-    <h5 class="judul-section text-center" style="font-family:OpenSans-Bold;font-size:25px; font-weight: normal;">
-        Berita</h5><br>
+    <h5 class="judul-section " style="font-family:OpenSans-Bold;font-size:25px; font-weight: normal;">
+        <strong>Berita</strong></h5><br>
     <div class="garis"></div><br>
     <div class="cbp-wrapper-outer">
         <div class="cbp-wrapper">

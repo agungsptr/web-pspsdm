@@ -4129,6 +4129,7 @@ input[type=submit].btn-block {
 .nav-tabs .nav-link.active {
     color: #495057;
     background-color: #fff;
+    font-weight: bold;
     border-color: #dee2e6 #dee2e6 #fff
 }
 
@@ -4152,6 +4153,10 @@ input[type=submit].btn-block {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     text-align: center
+}
+
+.active {
+    font-weight: bold;
 }
 
 .nav-justified .nav-item {

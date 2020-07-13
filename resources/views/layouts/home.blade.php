@@ -13,11 +13,13 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/mycss.css') }}">
+    {{-- font family --}}
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-white">
+<body class="bg-white" style="font-family: 'Montserrat', sans-serif;">
     {{-- Navbar --}}
-    <nav class="navbar navbar-expand-lg fixed-top shadow-sm tew">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm tew">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="{{ asset('images/pspsdm-logo.png') }}" width="50" height="50" class="d-inline-block align-top"
@@ -54,8 +56,16 @@
                             <a class="dropdown-item" href="#">Galery</a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Progrma Kerja</a>
+                    <li class="nav-item dropdown @yield('tentangkami-active')">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Program kerja
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="{{ route('home.sejarah') }}">Wana Tani</a>
+                            <a class="dropdown-item" href="{{ route('home.sejarah') }}">Pendidikan</a>
+                            <a class="dropdown-item" href="{{ route('home.sejarah') }}">Kehutanan</a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -75,7 +85,7 @@
             <div class="space-top-2 space-bottom-1 space-bottom-lg-2">
                 <div class="row justify-content-lg-between">
                     {{-- col-6 col-md-3 col-lg mb-5 mb-lg-0 --}}
-                    <div class="col-lg-5 col-md-3 col-lg mb-5 mb-lg-0">
+                    <div class="col-lg-6 col-md-3 col-lg mb-5 mb-lg-0">
                         <ul class="list-group list-group-flush text-white">
                             <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-20px-bottom font-weight-600 follow-us font-body-title"
                                 style="font-family:PFDinTextCompPro-Medium;font-size:16px; font-weight: normal;"><span
@@ -124,7 +134,7 @@
                     {{-- end col-6 col-md-3 col-lg mb-5 mb-lg-0 --}}
 
                     {{-- col-6 col-md-3 col-lg mb-5 mb-lg-0 --}}
-                    <div class="col-lg-3 col-md-3 col-lg mb-5 mb-lg-0 text-center">
+                    <div class="col-lg-2 col-md-3 col-lg mb-5 mb-lg-0 text-center">
                         <div class="widget-title alt-font text-white text-small text-medium-gray text-uppercase margin-20px-bottom font-weight-600 follow-us font-body-title"
                             style="font-family:PFDinTextCompPro-Medium;font-size:16px; font-weight: normal;"><span
                                 style="color: white">DIREKTUR PSPSDM</span>
@@ -142,11 +152,11 @@
             <br>
             <div class="space-1">
                 <div class="row align-items-md-center mb-7">
-                    <div class="col-md-9 mb-4 mb-md-0">
+                    <div class="col-md-10 mb-4 mb-md-0">
                         <span style="color: white">© 2020 Pusat Study Dan Pengembangan Sumber Daya
                             Manusia</span>
                     </div>
-                    <div class="col-md-3 text-md-right">
+                    <div class="col-md-2 text-md-right">
                         <ul class="list-group list-group-horizontal-sm ">
                             <li class="list-unstyled m-auto">
                                 <a href="https://www.facebook.com/" class="text-white"><span
