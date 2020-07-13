@@ -54,4 +54,16 @@ Route::group(['prefix' => '/'], function () {
         return view('home.visi-misi');
     })->name('home.visi-misi');
 
+    Route::get('pengalaman-proyek', function() {
+        return view('home.pengalaman-proyek');
+    })->name('home.pengalaman-proyek');
+
+    Route::get('list-program', function() {
+        return view('home.list-program');
+    })->name('home.list-program');
+
+    Route::get('detail-content', function() {
+        return view('home.detail-content');
+    })->name('home.detail-content');
+
 });
