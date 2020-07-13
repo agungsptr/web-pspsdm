@@ -15,6 +15,15 @@
     <link rel="stylesheet" href="{{ asset('css/mycss.css') }}">
     {{-- font family --}}
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        .ellipsis {
+            white-space: nowrap;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
 </head>
 
 <body class="bg-white" style="font-family: 'Montserrat', sans-serif;">
@@ -62,7 +71,8 @@
                             Program kerja
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="{{ route('home.sejarah') }}">Wana Tani</a>
+                            <a class="dropdown-item" href="{{ route('home.list-program', ['category'=>1]) }}">Wana
+                                Tani</a>
                             <a class="dropdown-item" href="{{ route('home.sejarah') }}">Pendidikan</a>
                             <a class="dropdown-item" href="{{ route('home.sejarah') }}">Kehutanan</a>
                         </div>
@@ -127,7 +137,7 @@
                             </li>
                             <small>&nbsp;</small>
                             <li class="list-unstyled">
-                                <a href="" style="color: white">PROGRAM</a>
+                                <a href="   " style="color: white">PROGRAM</a>
                             </li>
                         </ul>
                     </div>
