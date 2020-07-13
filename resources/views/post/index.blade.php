@@ -86,9 +86,9 @@ active
             ajax:"{{ route('getdata.post') }}",
             columns:[
                 {data:'title'},
-                {data:'category_id'},
+                {data:'category'},
                 {data:'date'},
-                {data:'user_id'},
+                {data:'user'},
                 {data:'aksi', sortable:false},
             ],
         });

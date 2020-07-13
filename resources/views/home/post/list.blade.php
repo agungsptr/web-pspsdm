@@ -12,18 +12,21 @@
     </h5>
     <br>
     {{-- disini nama category --}}
-
     
-    @foreach ($posts as $post)
-    <a href="{{route('home.detail-post', ['post_id' => $post->id])}}" style="text-decoration: none">
-        <div class="card shadow mb-2">
-            <div class="card-body">
-                <h5 class="card-title" style="color: black; font-weight: bold">{{$post->title}}</h5>
-                <p class="card-text ellipsis" style="color: grey">{{$post->content}}</p>
+    @if ($posts->count() > 0)
+        @foreach ($posts as $post)
+        <a href="{{route('home.detail-post', ['post_id' => $post->id])}}" style="text-decoration: none">
+            <div class="card shadow mb-2">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: black; font-weight: bold">{{$post->title}}</h5>
+                    <p class="card-text ellipsis" style="color: grey">{{$post->content}}</p>
+                </div>
             </div>
-        </div>
-    </a>
-    @endforeach
+        </a>
+        @endforeach
+    @else
+        <h3 style="font-size: 14pt; color: grey">No data</h3>
+    @endif
 </div>
 
 </div>

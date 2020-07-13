@@ -77,7 +77,6 @@ Route::group(['prefix' => '/'], function () {
 
     Route::get('program/detail/{post_id}/post', function ($post_id) {
         $post = Content::findOrFail($post_id);
-
         return view('home.post.detail', ['post' => $post]);
 
         // return $post->content;

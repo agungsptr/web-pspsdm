@@ -100,7 +100,7 @@ active
             </div>
             <div class="form-group">
                 <label for="">Konten</label>
-                <textarea name="content" id="" cols="30" rows="15" class="form-control {{$errors->first('content') ? 'is-invalid':''}}"">{{$post->content}}</textarea>
+                <textarea name="content" id="" cols="30" rows="15" class="form-control {{$errors->first('content') ? 'is-invalid':''}}"">{{$content}}</textarea>
                 @error('content')
                 <div class="invalid-feedback">
                     {{$message}}
@@ -108,7 +108,7 @@ active
                 @enderror
             </div>
             <button type="submit" class="btn btn-primary btn-md float-right">Simpan</button>
-            <a href="{{ route('user.index') }}" class="btn btn-secondary btn-md float-right mr-2">Kembali</a>
+            <a href="{{ route('post.index') }}" class="btn btn-secondary btn-md float-right mr-2">Kembali</a>
         </form>
     </div>
 </div>
