@@ -9,7 +9,7 @@
                     class="font-body-title"><strong>Category Name</strong></span></strong></span></h5>
                     <br>
     {{-- disini nama category --}}
-    <div class="card">
+    <div class="card shadow rounded">
         <div class="card-body">
             <h5 class=".card-title">Judul Postingan</h5>
             <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At hic asperiores tempora

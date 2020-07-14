@@ -127,7 +127,7 @@
                             </li>
                             <small>&nbsp;</small>
                             <li class="list-unstyled">
-                                <a href="" style="color: white">PROGRAM</a>
+                                <a href="{{ route('home.list-program') }}" style="color: white">PROGRAM</a>
                             </li>
                         </ul>
                     </div>
