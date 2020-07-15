@@ -133,10 +133,6 @@
                         <ul class="list-group list-group-flush text-white"
                             style="font-family:PFDinTextCompPro-Medium;font-size:16px; font-weight: normal;">
                             <li class="list-unstyled">
-                                <a href="" style="color: white">TENTANG KAMI</a>
-                            </li>
-                            <small>&nbsp;</small>
-                            <li class="list-unstyled">
                                 <a href="" style="color: white">GALERY</a>
                             </li>
                             <small>&nbsp;</small>

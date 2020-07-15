@@ -10,25 +10,16 @@ active
     <strong>Buletin</strong></h5><br>
 <div class="garis"></div><br>
 <div class="container">
-    <div class="row">
-        <div class="col-lg-3" style="margin-bottom: 30px">
-            <a href="{{ asset('images/hutan.png') }}" download>
-                <figure class="figure">
-                    <img src="{{ asset('images/hutan.png') }}" class="figure-img img-fluid rounded" alt="...">
-                    <figcaption class="figure-caption">Buletin name in this.</figcaption>
-                </figure>
-            </a>
-        </div>
-        <div class="col-lg-3" style="margin-bottom: 30px">
-            <a href="{{ asset('images/header1.png') }}" download>
-                <figure class="figure">
-                    <img src="{{ asset('images/hutan.png') }}" class="figure-img img-fluid rounded" alt="...">
-                    <figcaption class="figure-caption">Buletin name in this.</figcaption>
-                </figure>
-            </a>
-        </div>
-
-    </div>
+    <ul class="list-unstyled">
+        <a href="" download>
+            <li class="media">
+                <div class="media-body">
+                    <i class="fas fa-file-pdf fa-2x mr-3"></i>
+                    <span class="mt-0 mb-1 text-black" style="font-size: 14pt">Document name</span>
+                </div>
+            </li>
+        </a>
+    </ul>
 </div>
 <p>&nbsp;</p>
 @endsection
