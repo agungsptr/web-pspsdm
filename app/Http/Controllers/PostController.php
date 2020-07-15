@@ -68,7 +68,12 @@ class PostController extends Controller
         $post->content = nl2br($request->get('content'));
         $post->category_id = $request->get('category_id');
         $post->user_id = $request->get('user_id');
-        
+
+        if ($request->file('document')) {
+            $dir = "Dokumen";
+            $file = $request->file("document")->store($dir, 'public');
+            $post->document = $file;
+        }
 
         $post->save();
 
@@ -151,6 +156,13 @@ class PostController extends Controller
         $post->content = nl2br($request->get('content'));
         $post->category_id = $request->get('category_id');
         $post->user_id = $request->get('user_id');
+
+        if ($request->file('document')) {
+            $dir = "Dokumen";
+            $file = $request->file("document")->store($dir, 'public');
+            $post->document = $file;
+        }
+
         $post->save();
 
         for ($i = 1; $i <= 3; $i++) {
@@ -189,6 +201,10 @@ class PostController extends Controller
         foreach ($photos as $photo) {
             Storage::delete('public/' . $photo->photo);
             $photo->delete();
+        }
+
+        if ($post->document) {
+            Storage::delete('public/' . $post->document);
         }
 
         $post->delete();
