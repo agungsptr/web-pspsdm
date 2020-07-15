@@ -68,6 +68,8 @@ class PostController extends Controller
         $post->content = nl2br($request->get('content'));
         $post->category_id = $request->get('category_id');
         $post->user_id = $request->get('user_id');
+        
+
         $post->save();
 
         for ($i = 1; $i <= 3; $i++) {

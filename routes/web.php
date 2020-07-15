@@ -48,39 +48,34 @@ Route::group(['prefix' => 'getdata'], function () {
 });
 
 
-Route::group(['prefix' => '/'], function () {
-    Route::get('sejarah', function () {
-        return view('home.sejarah');
-    })->name('home.sejarah');
+Route::get('sejarah', function () {
+    return view('home.sejarah');
+})->name('home.sejarah');
 
-    Route::get('visi-misi', function () {
-        return view('home.visi-misi');
-    })->name('home.visi-misi');
+Route::get('visi-misi', function () {
+    return view('home.visi-misi');
+})->name('home.visi-misi');
 
-    Route::get('pengalaman-proyek', function () {
-        return view('home.pengalaman-proyek');
-    })->name('home.pengalaman-proyek');
+Route::get('pengalaman-proyek', function () {
+    return view('home.pengalaman-proyek');
+})->name('home.pengalaman-proyek');
 
-    Route::get('galery', function () {
-        return view('home.galery');
-    })->name('home.galery');
+Route::get('galery', 'PostDetailController@gallery')->name('home.gallery');
 
-    Route::get('buletin', function () {
-        return view('home.buletin');
-    })->name('home.buletin');
+Route::get('buletin', function () {
+    return view('home.buletin');
+})->name('home.buletin');
 
+Route::get('program', function () {
+    $categories = Category::all();
+    return view('home.category.list', ['categories' => $categories]);
+})->name('home.list-program');
 
-    Route::get('program', function () {
-        $categories = Category::all();
-        return view('home.category.list', ['categories' => $categories]);
-    })->name('home.list-program');
+Route::get('program/category/{category_id}', 'PostDetailController@byCategory')->name('home.list-category-post');
 
-    Route::get('program/category/{category_id}', 'PostDetailController@byCategory')->name('home.list-category-post');
+Route::get('program/detail/{post_id}/post', function ($post_id) {
+    $post = Content::findOrFail($post_id);
+    return view('home.post.detail', ['post' => $post]);
 
-    Route::get('program/detail/{post_id}/post', function ($post_id) {
-        $post = Content::findOrFail($post_id);
-        return view('home.post.detail', ['post' => $post]);
-
-        // return $post->content;
-    })->name('home.detail-post');
-});
+    // return $post->content;
+})->name('home.detail-post');
