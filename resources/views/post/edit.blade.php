@@ -99,6 +99,10 @@ active
                 @endfor
             </div>
             <div class="form-group">
+                <label for="">Dokumen Pdf</label>
+                <input type="file" class="form-control" name="document" accept="application/pdf">
+            </div>
+            <div class="form-group">
                 <label for="">Konten</label>
                 <textarea name="content" id="" cols="30" rows="15" class="form-control {{$errors->first('content') ? 'is-invalid':''}}"">{{$content}}</textarea>
                 @error('content')

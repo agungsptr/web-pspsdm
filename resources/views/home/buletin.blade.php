@@ -11,14 +11,18 @@ active
 <div class="garis"></div><br>
 <div class="container">
     <ul class="list-unstyled">
-        <a href="" download>
+        @foreach ($files as $file)
+        @if (!empty($file->document))
+        <a href="{{ asset('storage/'.$file->document) }}" download>
             <li class="media">
                 <div class="media-body">
                     <i class="fas fa-file-pdf fa-2x mr-3"></i>
-                    <span class="mt-0 mb-1 text-black" style="font-size: 14pt">Document name</span>
+                    <span class="mt-0 mb-1 text-black" style="font-size: 14pt">{{$file->title}}</span>
                 </div>
             </li>
         </a>
+        @endif
+        @endforeach
     </ul>
 </div>
 <p>&nbsp;</p>

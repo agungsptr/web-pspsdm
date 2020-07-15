@@ -40,16 +40,30 @@
             <h5 class="mb-5">{{$post->subtitle}}</h5>
             <div class="row mb-3">
                 <div class="col-lg-6">
-                    Author : 
-                    <small class="text-left" style="color: grey; font-weight: bold; font-size: 12pt">{{$post->user()}}</small>
+                    Author :
+                    <small class="text-left"
+                        style="color: grey; font-weight: bold; font-size: 12pt">{{$post->user()}}</small>
                 </div>
                 <div class="col-lg-6">
                     <small style="color: grey; font-size: 12pt">{{$post->date()}}</small>
-                </div>  
+                </div>
             </div>
             <p class="font-body text-justify" style="color: #000000; word-wrap: break-word; font-size: 14pt">
                 {{print_r($post->content)}}</p>
         </div>
+    </div>
+
+    <div class="mb-5">
+        @if (!empty($post->document))
+        <a href="{{ asset('storage/'.$post->document) }}" download>
+            <li class="media">
+                <div class="media-body">
+                    <i class="fas fa-file-pdf fa-2x mr-3" style="color: red"></i>
+                    <span class="mt-0 mb-1 text-black" style="font-size: 14pt">{{$post->title}}</span>
+                </div>
+            </li>
+        </a>
+        @endif
     </div>
 </div>
 @endsection
