@@ -3,7 +3,7 @@
 active
 @endsection
 @section('header')
-{{-- slider --}}
+
 <img src="{{ asset('images/hutan.png') }}" class="img-fluid" alt="Responsive image">
 
 

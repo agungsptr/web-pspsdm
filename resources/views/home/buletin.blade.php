@@ -16,13 +16,8 @@ active
         <a href="{{ asset('storage/'.$file->document) }}" download>
             <li class="media">
                 <div class="media-body">
-<<<<<<< HEAD
                     <i class="fas fa-file-pdf fa-2x mr-3" style="color: red"></i>
-                    <span class="mt-0 mb-1 text-black" style="font-size: 14pt">Document name</span>
-=======
-                    <i class="fas fa-file-pdf fa-2x mr-3"></i>
                     <span class="mt-0 mb-1 text-black" style="font-size: 14pt">{{$file->title}}</span>
->>>>>>> b2fcf99dd6d13e44cf4a0afdb96c651e7b0ed9e1
                 </div>
             </li>
         </a>

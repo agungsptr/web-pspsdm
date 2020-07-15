@@ -1,8 +1,7 @@
 @extends('layouts.home')
 
 @section('header')
-{{-- slider --}}
-<img src="{{ asset('images/header.png') }}" class="img-fluid" alt="Responsive image">
+<img src="{{ asset('images/hutan.png') }}" class="img-fluid" alt="Responsive image">
 <p>&nbsp;</p>
 <div class="container">
     <h5 class="font-body font-justify"><span style="color:grey">

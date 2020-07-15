@@ -1,18 +1,15 @@
 @extends('layouts.home')
-@section('home-active')
-active
-@endsection
 @section('header')
 {{-- slider --}}
 <img src="{{ asset('images/Header1.png') }}" class="img-fluid" alt="Responsive image">
 <p>&nbsp;</p>
 <div class="container">
     <h5 class="judul-section " style="font-family:OpenSans-Bold;font-size:25px; font-weight: normal;">
-        <strong>Berita</strong></h5><br>
-    <div class="garis mb-5"></div><br>
+        <strong>Berita</strong></h5>
+    <div class="garis mb-5"></div>
 
-    {{-- caraousel --}}
-    <div class="carousel slide" data-ride="carousel">
+    {{-- caraousel Content--}}
+    <div class="carousel slide mb-5" data-ride="carousel">
         <div class="carousel-inner">
             @foreach ($posts as $berita)
             @if ($loop->iteration == 1)
@@ -28,10 +25,10 @@ active
                         <div class="col-md-8">
                             <div class="card-body ml-5">
                                 <h5 class="card-title"><strong style="color: black">{{$berita->title}}</strong></h5>
-                                <p class="card-text ellipsis2" style="max-width: 100%; color: gray">{{$berita->content}}
+                                <p class="card-text ellipsis2 text-justify mb-5" style="max-width: 100%; color: gray">{{$berita->content}}
                                 </p>
-                                <a href="">
-                                    <p class="card-text"><small class="text-muted">selengkapnya . . </small></p>
+                                <a href="{{route('home.detail-post', ['post_id' => $berita->id])}}" class="float-right" style="color: #039564;">
+                                    <small>Selengkapnya</small>
                                 </a>
                             </div>
                         </div>
@@ -50,10 +47,10 @@ active
                         <div class="col-md-8">
                             <div class="card-body ml-5">
                                 <h5 class="card-title"><strong style="color: black">{{$berita->title}}</strong></h5>
-                                <p class="card-text ellipsis2" style="max-width: 100%; color: gray">{{$berita->content}}
+                                <p class="card-text ellipsis2 text-justify mb-5" style="max-width: 100%; color: gray">{{$berita->content}}
                                 </p>
-                                <a href="">
-                                    <p class="card-text"><small class="text-muted">selengkapnya . . </small></p>
+                                <a href="{{route('home.detail-post', ['post_id' => $berita->id])}}" class="float-right" style="color: #039564;">
+                                    <small>Selengkapnya</small>
                                 </a>
                             </div>
                         </div>
@@ -63,6 +60,12 @@ active
             @endforeach
         </div>
     </div>
-    <p>&nbsp;</p>
+    
+    {{-- Work Area Article --}}
+    <h5 class="judul-section" style="font-family:OpenSans-Bold;font-size:25px; font-weight: normal;">
+        <strong>Lokasi Kerja</strong></h5>
+    <div class="garis mb-5"></div>
+
+    
 </div>
 @endsection

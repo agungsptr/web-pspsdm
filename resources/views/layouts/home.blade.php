@@ -29,7 +29,7 @@
             text-overflow: Ellipsis;
             display: -webkit-box;
             -webkit-line-clamp: 3;
-            width: 90%;
+            width: 100%;
             -webkit-box-orient: vertical;
         }
     </style>
@@ -39,7 +39,7 @@
     {{-- Navbar --}}
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm tew">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{ asset('images/pspsdm-logo.png') }}" width="50" height="50" class="d-inline-block align-top"
                     alt="" loading="lazy">
             </a>
@@ -50,7 +50,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item @yield('home-active')">
-                        <a class="nav-link text-white" href="{{ route('home') }}">Berita <span
+                        <a class="nav-link text-white" href="{{ route('home.list-category-post', ['category_id'=>107]) }}">Berita <span
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown @yield('tentangkami-active')">
@@ -156,6 +156,11 @@
                             <li class="list-unstyled">
                                 <a href="{{ route('home.list-program', ['category'=>1]) }}"
                                     style="color: white">PROGRAM</a>
+                            </li>
+                            <small>&nbsp;</small>
+                            <li class="list-unstyled">
+                                <a href="{{ route('home.buletin') }}"
+                                    style="color: white">BULETIN</a>
                             </li>
                         </ul>
                     </div>
