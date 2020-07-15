@@ -99,7 +99,8 @@ active
             </div>
             <div class="form-group">
                 <label for="">Konten</label>
-                <textarea name="content" id="" cols="30" rows="15" class="form-control"></textarea>
+                <textarea class="ckeditor" id="ckedtor"  name="content"></textarea>
+                {{-- <textarea name="content" id="" cols="30" rows="15" class="form-control"></textarea> --}}
             </div>
             <button type="submit" class="btn btn-primary btn-md float-right">Simpan</button>
         </form>

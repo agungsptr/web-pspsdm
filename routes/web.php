@@ -19,7 +19,8 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', function () {
-    return view('home.index');
+    $posts = Content::where("category_id",107)->get()->take(3);
+    return view('home.index',["posts"=>$posts]);
 })->name('home');
 
 // disable route '/register'

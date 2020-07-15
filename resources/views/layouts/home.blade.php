@@ -23,6 +23,15 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+
+        .ellipsis2 {
+            overflow: hidden;
+            text-overflow: Ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            width: 90%;
+            -webkit-box-orient: vertical;
+        }
     </style>
 </head>
 
@@ -71,14 +80,22 @@
                             Program kerja
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="{{ route('home.list-program', ['category'=>1]) }}">Agro
-                                forestry</a>
-                            <a class="dropdown-item" href="{{ route('home.sejarah') }}">Kesehatan</a>
-                            <a class="dropdown-item" href="{{ route('home.sejarah') }}">Air bersih</a>
-                            <a class="dropdown-item" href="{{ route('home.sejarah') }}">Pertanian</a>
-                            <a class="dropdown-item" href="{{ route('home.sejarah') }}">Pendidikan</a>
-                            <a class="dropdown-item" href="{{ route('home.sejarah') }}">Proyek padat karya</a>
-                            <a class="dropdown-item" href="{{ route('home.sejarah') }}">Penelitian dan pelatihan</a>
+                            <a class="dropdown-item"
+                                href="{{ route('home.list-category-post', ['category_id'=>100]) }}">Agro forestry</a>
+                            <a class="dropdown-item"
+                                href="{{ route('home.list-category-post', ['category_id'=>101]) }}">Kesehatan</a>
+                            <a class="dropdown-item"
+                                href="{{ route('home.list-category-post', ['category_id'=>102]) }}">Air bersih</a>
+                            <a class="dropdown-item"
+                                href="{{ route('home.list-category-post', ['category_id'=>103]) }}">Pertanian</a>
+                            <a class="dropdown-item"
+                                href="{{ route('home.list-category-post', ['category_id'=>104]) }}">Pendidikan</a>
+                            <a class="dropdown-item"
+                                href="{{ route('home.list-category-post', ['category_id'=>105]) }}">Proyek padat
+                                karya</a>
+                            <a class="dropdown-item"
+                                href="{{ route('home.list-category-post', ['category_id'=>106]) }}">Penelitian dan
+                                pelatihan</a>
                         </div>
                     </li>
                 </ul>
@@ -133,11 +150,12 @@
                         <ul class="list-group list-group-flush text-white"
                             style="font-family:PFDinTextCompPro-Medium;font-size:16px; font-weight: normal;">
                             <li class="list-unstyled">
-                                <a href="" style="color: white">GALERY</a>
+                                <a href="{{ route('home.gallery') }}" style="color: white">GALERY</a>
                             </li>
                             <small>&nbsp;</small>
                             <li class="list-unstyled">
-                                <a href="   " style="color: white">PROGRAM</a>
+                                <a href="{{ route('home.list-program', ['category'=>1]) }}"
+                                    style="color: white">PROGRAM</a>
                             </li>
                         </ul>
                     </div>
