@@ -13,9 +13,9 @@ class UserSeeder extends Seeder
     public function run()
     {
         $user = new User;
-        $user->name = "admin";
-        $user->username = "admin";
-        $user->password = \Hash::make("1234567890");
+        $user->name = "root";
+        $user->username = "root";
+        $user->password = \Hash::make("YJ`/3qas2]MkQ9T&");
         $user->save();
     }
 }

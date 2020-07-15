@@ -15,7 +15,7 @@
 
     <div class="row">
         <div class="col-lg-3" style="margin-bottom: 15px">
-            <a href="" style="text-decoration: none">
+            <a href="{{ route('home.list-category-post', ['category_id'=>104]) }}" style="text-decoration: none">
                 <div class="card shadow" style="width: 15rem;">
                     <img src="{{ asset('images/pendidikan.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">

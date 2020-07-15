@@ -75,14 +75,7 @@ Route::group(['prefix' => '/'], function () {
         return view('home.category.list', ['categories' => $categories]);
     })->name('home.list-program');
 
-    Route::get('program/category/{category_id}', function ($category_id) {
-        $categ = Category::findOrFail($category_id);
-        $posts = Content::where('category_id', $category_id)->get();
-        return view('home.post.list', [
-            'posts' => $posts,
-            'category' => $categ
-        ]);
-    })->name('home.list-category-post');
+    Route::get('program/category/{category_id}', 'PostDetailController@byCategory')->name('home.list-category-post');
 
     Route::get('program/detail/{post_id}/post', function ($post_id) {
         $post = Content::findOrFail($post_id);
