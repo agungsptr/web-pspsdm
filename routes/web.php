@@ -63,7 +63,8 @@ Route::get('pengalaman-proyek', function () {
 Route::get('galery', 'PostDetailController@gallery')->name('home.gallery');
 
 Route::get('buletin', function () {
-    return view('home.buletin');
+    $post = Content::all();
+    return view('home.buletin', ['files' => $post]);
 })->name('home.buletin');
 
 Route::get('program', function () {
