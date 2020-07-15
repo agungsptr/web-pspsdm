@@ -61,7 +61,7 @@
                             Publikasi
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="{{ route('home.galery') }}">Galery</a>
+                            <a class="dropdown-item" href="{{ route('home.gallery') }}">Galery</a>
                             <a class="dropdown-item" href="{{ route('home.buletin') }}">Bulettin</a>
                         </div>
                     </li>

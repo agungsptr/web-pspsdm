@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Model\Category;
 use App\Model\Content;
+use App\Model\Photo;
 use Illuminate\Http\Request;
 
 class PostDetailController extends Controller
@@ -36,5 +37,11 @@ class PostDetailController extends Controller
     {
         $post = Content::findOrFail($id);
         return $post;
+    }
+
+    public function gallery()
+    {
+        $photos = Photo::all();
+        return view('home.gallery', ['photos' => $photos]);
     }
 }
