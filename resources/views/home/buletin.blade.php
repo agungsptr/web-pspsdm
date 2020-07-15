@@ -14,7 +14,7 @@ active
         <a href="" download>
             <li class="media">
                 <div class="media-body">
-                    <i class="fas fa-file-pdf fa-2x mr-3"></i>
+                    <i class="fas fa-file-pdf fa-2x mr-3" style="color: red"></i>
                     <span class="mt-0 mb-1 text-black" style="font-size: 14pt">Document name</span>
                 </div>
             </li>
