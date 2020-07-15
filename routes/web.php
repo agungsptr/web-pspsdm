@@ -1,5 +1,7 @@
 <?php
 
+use App\Model\Category;
+use App\Model\Content;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 
@@ -13,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Auth::routes();
 
 Route::get('/', function () {
@@ -20,7 +23,7 @@ Route::get('/', function () {
 })->name('home');
 
 // disable route '/register'
-Route::match(["GET", "POST"], "/register", function(){
+Route::match(["GET", "POST"], "/register", function () {
     return abort(404);
 });
 
@@ -46,24 +49,45 @@ Route::group(['prefix' => 'getdata'], function () {
 
 
 Route::group(['prefix' => '/'], function () {
-    Route::get('sejarah', function (){
+    Route::get('sejarah', function () {
         return view('home.sejarah');
     })->name('home.sejarah');
-    
-    Route::get('visi-misi', function (){
+
+    Route::get('visi-misi', function () {
         return view('home.visi-misi');
     })->name('home.visi-misi');
 
-    Route::get('pengalaman-proyek', function() {
+    Route::get('pengalaman-proyek', function () {
         return view('home.pengalaman-proyek');
     })->name('home.pengalaman-proyek');
 
-    Route::get('list-program', function() {
-        return view('home.list-program');
+    Route::get('galery', function () {
+        return view('home.galery');
+    })->name('home.galery');
+
+    Route::get('buletin', function () {
+        return view('home.buletin');
+    })->name('home.buletin');
+
+
+    Route::get('program', function () {
+        $categories = Category::all();
+        return view('home.category.list', ['categories' => $categories]);
     })->name('home.list-program');
 
-    Route::get('detail-content', function() {
-        return view('home.detail-content');
-    })->name('home.detail-content');
+    Route::get('program/category/{category_id}', function ($category_id) {
+        $categ = Category::findOrFail($category_id);
+        $posts = Content::where('category_id', $category_id)->get();
+        return view('home.post.list', [
+            'posts' => $posts,
+            'category' => $categ
+        ]);
+    })->name('home.list-category-post');
 
+    Route::get('program/detail/{post_id}/post', function ($post_id) {
+        $post = Content::findOrFail($post_id);
+        return view('home.post.detail', ['post' => $post]);
+
+        // return $post->content;
+    })->name('home.detail-post');
 });

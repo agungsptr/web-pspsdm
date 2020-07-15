@@ -15,6 +15,15 @@
     <link rel="stylesheet" href="{{ asset('css/mycss.css') }}">
     {{-- font family --}}
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        .ellipsis {
+            white-space: nowrap;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
 </head>
 
 <body class="bg-white" style="font-family: 'Montserrat', sans-serif;">
@@ -32,7 +41,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item @yield('home-active')">
-                        <a class="nav-link text-white" href="{{ route('home') }}">Home <span
+                        <a class="nav-link text-white" href="{{ route('home') }}">Berita <span
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown @yield('tentangkami-active')">
@@ -46,14 +55,14 @@
                             <a class="dropdown-item" href="{{ route('home.pengalaman-proyek') }}">Pengalaman Proyek</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown  @yield('publikasi-active')">
                         <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Publikasi
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Berita</a>
-                            <a class="dropdown-item" href="#">Galery</a>
+                            <a class="dropdown-item" href="{{ route('home.galery') }}">Galery</a>
+                            <a class="dropdown-item" href="{{ route('home.buletin') }}">Bulettin</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown @yield('tentangkami-active')">
@@ -62,9 +71,14 @@
                             Program kerja
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="{{ route('home.sejarah') }}">Wana Tani</a>
+                            <a class="dropdown-item" href="{{ route('home.list-program', ['category'=>1]) }}">Agro
+                                forestry</a>
+                            <a class="dropdown-item" href="{{ route('home.sejarah') }}">Kesehatan</a>
+                            <a class="dropdown-item" href="{{ route('home.sejarah') }}">Air bersih</a>
+                            <a class="dropdown-item" href="{{ route('home.sejarah') }}">Pertanian</a>
                             <a class="dropdown-item" href="{{ route('home.sejarah') }}">Pendidikan</a>
-                            <a class="dropdown-item" href="{{ route('home.sejarah') }}">Kehutanan</a>
+                            <a class="dropdown-item" href="{{ route('home.sejarah') }}">Proyek padat karya</a>
+                            <a class="dropdown-item" href="{{ route('home.sejarah') }}">Penelitian dan pelatihan</a>
                         </div>
                     </li>
                 </ul>
@@ -127,7 +141,7 @@
                             </li>
                             <small>&nbsp;</small>
                             <li class="list-unstyled">
-                                <a href="{{ route('home.list-program') }}" style="color: white">PROGRAM</a>
+                                <a href="   " style="color: white">PROGRAM</a>
                             </li>
                         </ul>
                     </div>
@@ -154,7 +168,7 @@
                 <div class="row align-items-md-center mb-7">
                     <div class="col-md-10 mb-4 mb-md-0">
                         <span style="color: white">© 2020 Pusat Study Dan Pengembangan Sumber Daya
-                            Manusia</span>
+                            Manusia - PSPSDM</span>
                     </div>
                     <div class="col-md-2 text-md-right">
                         <ul class="list-group list-group-horizontal-sm ">
@@ -163,6 +177,8 @@
                                         class="fab fa-facebook fa-2x mt-1 mr-2" style="color: white"></span></a>
                                 <a href="instagram.com" class="text-white"><span
                                         class="fab fa-instagram fa-2x mt-1 mr-2" style="color: white"></span></a>
+                                <a href="instagram.com" class="text-white"><span class="fab fa-youtube fa-2x mt-1 mr-2"
+                                        style="color: white"></span></a>
                             </li>
                         </ul>
                     </div>

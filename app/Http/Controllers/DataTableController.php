@@ -39,6 +39,12 @@ class DataTableController extends Controller
     public function getPost()
     {
         return datatables()->of(Content::all())
+            ->addColumn('user', function ($post){
+                return $post->user();
+            })
+            ->addColumn('category', function ($post){
+                return $post->category();
+            })
             ->addColumn('aksi', function ($post) {
                 return '<a href="' . route('post.edit', ['post' => $post->id]) . '" class="btn btn-warning btn-sm mr-2">Edit</a>'
                     . '<button type="button" class="btn btn-danger btn-sm btn-delete" data-remote="' . route('post.destroy', ['post' => $post->id]) . '">Delete</button>';

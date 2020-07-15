@@ -65,7 +65,7 @@ class PostController extends Controller
         $post->title = $request->get('title');
         $post->subtitle = $request->get('subtitle');
         $post->date = $request->get('date');
-        $post->content = $request->get('content');
+        $post->content = nl2br($request->get('content'));
         $post->category_id = $request->get('category_id');
         $post->user_id = $request->get('user_id');
         $post->save();
@@ -73,7 +73,7 @@ class PostController extends Controller
         for ($i = 1; $i <= 3; $i++) {
             if ($request->file("photo_" . $i)) {
                 $photo = new Photo;
-                $dir = "Foto/";
+                $dir = "Foto";
                 $file = $request->file("photo_" . $i)->store($dir, 'public');
                 $photo->photo = $file;
                 $photo->content_id = $post->id;
@@ -105,9 +105,14 @@ class PostController extends Controller
     {
         $post = Content::findOrFail($id);
         $categories = Category::all();
+
+        $breaks = array("<br />", "<br>", "<br/>");
+        $content = str_ireplace($breaks, "", $post->content);
+
         return view('post.edit', [
             'post' => $post,
-            'categories' => $categories
+            'categories' => $categories,
+            'content' => $content
         ]);
     }
 
@@ -141,7 +146,7 @@ class PostController extends Controller
         $post->title = $request->get('title');
         $post->subtitle = $request->get('subtitle');
         $post->date =  str_replace("T", " ", $request->get('date'));
-        $post->content = $request->get('content');
+        $post->content = nl2br($request->get('content'));
         $post->category_id = $request->get('category_id');
         $post->user_id = $request->get('user_id');
         $post->save();
@@ -157,7 +162,7 @@ class PostController extends Controller
                     $photo->content_id = $id;
                 }
 
-                $dir = "Foto/";
+                $dir = "Foto";
                 $file = $request->file("photo_" . $i)->store($dir, 'public');
                 $photo->photo = $file;
                 $photo->save();
