@@ -22,7 +22,7 @@
                     <div class="d-flex w-100 justify-content-between mb-3">
                         <h4 style="color: black;"><strong>{{$post->title}}</strong></h4>
                     </div>
-                    <p class="text-justify ellipsis2">{{$post->content}}.</p>
+                    <p class="text-justify ellipsis2">{!!strip_tags($post->content)!!}.</p>
                 </div>
                 <div class="col-lg-2">
                     <img src="{{ asset('storage/'.$post->photos()[0]->photo) }}" alt="No Images" 
