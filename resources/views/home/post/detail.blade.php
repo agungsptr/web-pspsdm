@@ -52,7 +52,7 @@
 
     {{-- content body --}}
 
-    <p class="font-body text-justify mt-4" style="color: #000000; word-wrap: break-word; font-size: 14pt">
+    <p class="font-body mt-4 text-justify" style="color: #000000; font-size: 14pt">
         {{print_r($post->content)}}</p>
 
 

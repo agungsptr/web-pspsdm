@@ -9,6 +9,8 @@
 
     {{-- font awesome --}}
     <link rel="stylesheet" href="{{asset('vendor/AdminLTE/plugins/fontawesome-free/css/all.min.css')}}">
+    {{-- icon logo --}}
+    <link rel="icon" href="{{ asset('images/pspsdm-logo.png') }}" type="image/x-icon">
     {{-- stysheet --}}
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
