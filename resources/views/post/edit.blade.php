@@ -100,11 +100,12 @@ active
             </div>
             <div class="form-group">
                 <label for="">Dokumen Pdf</label>
-                <input type="file" class="form-control" name="document" accept="application/pdf">
+                <input type="file" class="form-control" name="document" accept="application/pdf" value="{{ asset('storage/'.$post->document) }}">
             </div>
             <div class="form-group">
                 <label for="">Konten</label>
-                <textarea name="content" id="" cols="30" rows="15" class="form-control {{$errors->first('content') ? 'is-invalid':''}}"">{{$content}}</textarea>
+                <textarea class="ckeditor {{$errors->first('content') ? 'is-invalid':''}}" id="ckedtor"  name="content">{{$content}}</textarea>
+                {{-- <textarea name="content" id="" cols="30" rows="15" class="form-control {{$errors->first('content') ? 'is-invalid':''}}"">{{$content}}</textarea> --}}
                 @error('content')
                 <div class="invalid-feedback">
                     {{$message}}

@@ -51,7 +51,8 @@ html {
     -ms-overflow-style: scrollbar;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
-}
+
+
 .garis {
     background-color: rgba(63, 160, 107, 1.0);
     height: 2px;
@@ -63,10 +64,10 @@ html {
     transform: rotate(0);
 }
 
-.garis {
-    background-color: rgba(63, 160, 107, 1.0);
+.garis2 {
+    background-color:#999;
     height: 2px;
-    width: 88px;
+    width: 100%;
     margin: auto;
     margin-top: auto;
     margin-top: -20px;
@@ -74,64 +75,6 @@ html {
     -webkit-transform: rotate(0);
     transform: rotate(0);
 }
-
-.garis {
-    background-color: rgba(63, 160, 107, 1.0);
-    height: 2px;
-    width: 88px;
-    margin: auto;
-    margin-top: 3px;
-    -ms-transform: rotate(0);
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-}
-
-
-element.style {
-}
-.garis {
-    background-color: rgba(63, 160, 107, 1.0);
-    height: 2px;
-    width: 88px;
-    margin: auto;
-    margin-top: 3px;
-    -ms-transform: rotate(0);
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-}
-.garis {
-    background-color: rgba(63, 160, 107, 1.0);
-    height: 2px;
-    width: 88px;
-    margin: auto;
-    margin-top: auto;
-    margin-top: -20px;
-    -ms-transform: rotate(0);
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-}
-.garis {
-    background-color: rgba(63, 160, 107, 1.0);
-    height: 2px;
-    width: 88px;
-    margin: auto;
-    margin-top: 3px;
-    -ms-transform: rotate(0);
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-}
-.garis {
-    background-color: rgba(63, 160, 107, 1.0);
-    height: 2px;
-    width: 88px;
-    margin: auto;
-    margin-top: auto;
-    margin-top: -20px;
-    -ms-transform: rotate(0);
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-}
-
 
 .judul-section {
     color: #0A0B09;
@@ -6507,7 +6450,7 @@ button.bg-dark:hover {
 }
 
 .rounded {
-    border-radius: .25rem !important
+    border-radius: .50rem !important
 }
 
 .rounded-top {

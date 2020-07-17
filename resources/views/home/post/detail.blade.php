@@ -2,56 +2,60 @@
 
 @section('header')
 {{-- slider --}}
-<img src="{{ asset('images/hutan.png') }}" class="img-fluid" alt="Responsive image">
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+<img src="{{ asset('images/hutan.png') }}" class="img-fluid mb-5" alt="Responsive image">
+
 <div class="container">
+
+
+    <div class=" mt-4 mb-5">
+        <p class="font-weight-bold mb-3" style="font-size: 2.5rem; font-weight: 300; line-height: 1.2;">
+            {{$post->title}}</p>
+        <h5 class="mb-4">{{$post->subtitle}}</h5>
+
+        Author :
+        <small class="ml-2 mr-5" style="color: grey; font-weight: bold; font-size: 12pt">{{$post->user()}}</small>
+
+        <small class="float-right mr-2">{{$post->date()}}</small>
+
+        <div class="garis2 mt-3 "></div>
+    </div>
+
+
     @if ($post->photos()->count() > 1)
     <div class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             @isset($post->photos()[0]->photo)
             <div class="carousel-item active">
                 <img src="{{ asset('storage/'.$post->photos()[0]->photo) }}" class="rounded mx-auto d-block w-100"
-                    alt="img1" height="300px">
+                    alt="img1" height="500px">
             </div>
             @endisset
             @isset($post->photos()[1]->photo)
             <div class="carousel-item">
                 <img src="{{ asset('storage/'.$post->photos()[1]->photo) }}" class="rounded mx-auto d-block w-100"
-                    alt="img2" height="300px">
+                    alt="img2" height="500px">
             </div>
             @endisset
             @isset($post->photos()[2]->photo)
             <div class="carousel-item">
                 <img src="{{ asset('storage/'.$post->photos()[2]->photo) }}" class="rounded mx-auto d-block w-100"
-                    alt="img3" height="300px">
+                    alt="img3" height="500px">
             </div>
             @endisset
         </div>
     </div>
     @else
     <img src="{{ asset('storage/'.$post->photos()[0]->photo) }}" class="rounded mx-auto d-block w-100" alt="img1"
-        height="300px">
+        height="500px">
     @endif
 
-    <div class="row mt-4 mb-5">
-        <div class="col">
-            <span class="display-3"><strong>{{$post->title}}</strong></span>
-            <h5 class="mb-5">{{$post->subtitle}}</h5>
-            <div class="row mb-3">
-                <div class="col-lg-6">
-                    Author :
-                    <small class="text-left"
-                        style="color: grey; font-weight: bold; font-size: 12pt">{{$post->user()}}</small>
-                </div>
-                <div class="col-lg-6">
-                    <small style="color: grey; font-size: 12pt">{{$post->date()}}</small>
-                </div>
-            </div>
-            <p class="font-body text-justify" style="color: #000000; word-wrap: break-word; font-size: 14pt">
-                {{print_r($post->content)}}</p>
-        </div>
-    </div>
+
+    {{-- content body --}}
+
+    <p class="font-body mt-4 text-justify" style="color: #000000; font-size: 14pt">
+        {{print_r($post->content)}}</p>
+
+
 
     <div class="mb-5">
         @if (!empty($post->document))
@@ -65,5 +69,6 @@
         </a>
         @endif
     </div>
+
 </div>
 @endsection

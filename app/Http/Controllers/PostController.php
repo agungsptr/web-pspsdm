@@ -65,7 +65,7 @@ class PostController extends Controller
         $post->title = $request->get('title');
         $post->subtitle = $request->get('subtitle');
         $post->date = $request->get('date');
-        $post->content = nl2br($request->get('content'));
+        $post->content = $request->get('content');
         $post->category_id = $request->get('category_id');
         $post->user_id = $request->get('user_id');
 
@@ -113,13 +113,10 @@ class PostController extends Controller
         $post = Content::findOrFail($id);
         $categories = Category::all();
 
-        $breaks = array("<br />", "<br>", "<br/>");
-        $content = str_ireplace($breaks, "", $post->content);
-
         return view('post.edit', [
             'post' => $post,
             'categories' => $categories,
-            'content' => $content
+            'content' => $post->content
         ]);
     }
 
@@ -153,7 +150,7 @@ class PostController extends Controller
         $post->title = $request->get('title');
         $post->subtitle = $request->get('subtitle');
         $post->date =  str_replace("T", " ", $request->get('date'));
-        $post->content = nl2br($request->get('content'));
+        $post->content = $request->get('content');
         $post->category_id = $request->get('category_id');
         $post->user_id = $request->get('user_id');
 

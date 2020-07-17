@@ -3,8 +3,7 @@
 active
 @endsection
 @section('header')
-{{-- slider --}}
-<img src="{{ asset('images/slider1.png') }}" class="img-fluid" alt="Responsive image">
+<img src="{{ asset('images/hutan.png') }}" class="img-fluid" alt="Responsive image">
 <p>&nbsp;</p>
 <div class="container">
     <h5 class="judul-section text-center" style="font-family:OpenSans-Bold;font-size:25px; font-weight: normal;">

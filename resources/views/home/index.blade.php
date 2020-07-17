@@ -1,90 +1,71 @@
 @extends('layouts.home')
-@section('home-active')
-active
-@endsection
 @section('header')
 {{-- slider --}}
 <img src="{{ asset('images/Header1.png') }}" class="img-fluid" alt="Responsive image">
 <p>&nbsp;</p>
 <div class="container">
     <h5 class="judul-section " style="font-family:OpenSans-Bold;font-size:25px; font-weight: normal;">
-        <strong>Berita</strong></h5><br>
-    <div class="garis"></div><br>
+        <strong>Berita</strong></h5>
+    <div class="garis mb-5"></div>
 
-    {{-- caraousel --}}
-    <div class="carousel slide" data-ride="carousel">
+    {{-- caraousel Content--}}
+    <div class="carousel slide mb-5" data-ride="carousel">
         <div class="carousel-inner">
+            @foreach ($posts as $berita)
+            @if ($loop->iteration == 1)
             <div class="carousel-item active">
-                <div class="card mb-3">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                            <img src="{{ asset('images/hutan.png') }}" class="card-img" alt="..." width="200px"
-                                height="200px">
+                            @if (!empty($berita->photos()[0]->photo))
+                            <img src="{{ asset('storage/'.$berita->photos()[0]->photo) }}" class="card-img rounded" alt="..."
+                                width="300px" height="350px">
+                            @endif
+
                         </div>
                         <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Post Name</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
-                                    molestiae,
-                                    expedita commodi, odit neque dolore quod omnis nemo laboriosam asperiores ab
-                                    recusandae
-                                    praesentium doloribus voluptates quam maxime fugiat error optio!</p>
-                                <a href="">
-                                    <p class="card-text"><small class="text-muted">selengkapnya . . </small></p>
+                            <div class="card-body ml-5">
+                                <h5 class="card-title"><strong style="color: black">{{$berita->title}}</strong></h5>
+                                <p class="card-text ellipsis2 text-justify mb-5" style="max-width: 100%; color: gray">{{$berita->content}}
+                                </p>
+                                <a href="{{route('home.detail-post', ['post_id' => $berita->id])}}" class="float-right" style="color: #039564;">
+                                    <small>Selengkapnya</small>
                                 </a>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
+            @else
             <div class="carousel-item">
-                <div class="card mb-3">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                            <img src="{{ asset('images/hutan.png') }}" class="card-img" alt="..." width="200px"
-                                height="200px">
+                            @if (!empty($berita->photos()[0]->photo))
+                            <img src="{{ asset('storage/'.$berita->photos()[0]->photo) }}" class="card-img rounded" alt="..."
+                                width="300px" height="350px">
+                            @endif
+
                         </div>
                         <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Post Name</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
-                                    molestiae,
-                                    expedita commodi, odit neque dolore quod omnis nemo laboriosam asperiores ab
-                                    recusandae
-                                    praesentium doloribus voluptates quam maxime fugiat error optio!</p>
-                                <a href="">
-                                    <p class="card-text"><small class="text-muted">selengkapnya . . </small></p>
+                            <div class="card-body ml-5">
+                                <h5 class="card-title"><strong style="color: black">{{$berita->title}}</strong></h5>
+                                <p class="card-text ellipsis2 text-justify mb-5" style="max-width: 100%; color: gray">{{$berita->content}}
+                                </p>
+                                <a href="{{route('home.detail-post', ['post_id' => $berita->id])}}" class="float-right" style="color: #039564;">
+                                    <small>Selengkapnya</small>
                                 </a>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="card mb-3">
-                    <div class="row no-gutters">
-                        <div class="col-md-4">
-                            <img src="{{ asset('images/hutan.png') }}" class="card-img" alt="..." width="200px"
-                                height="200px">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Post Name</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
-                                    molestiae,
-                                    expedita commodi, odit neque dolore quod omnis nemo laboriosam asperiores ab
-                                    recusandae
-                                    praesentium doloribus voluptates quam maxime fugiat error optio!</p>
-                                <a href="">
-                                    <p class="card-text"><small class="text-muted">selengkapnya . . </small></p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endif
+            @endforeach
         </div>
     </div>
-    <p>&nbsp;</p>
+    
+    {{-- Work Area Article --}}
+    <h5 class="judul-section" style="font-family:OpenSans-Bold;font-size:25px; font-weight: normal;">
+        <strong>Lokasi Kerja</strong></h5>
+    <div class="garis mb-5"></div>
+
+    
 </div>
 @endsection

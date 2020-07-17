@@ -19,7 +19,8 @@ class CategoryProgramSeeder extends Seeder
             'Pertanian',                //103
             'Pendidikan',               //104
             'Proyek Padat Karya',       //105      
-            'Penelitian & Pelatihan'    //106
+            'Penelitian & Pelatihan',   //106
+            'Berita'                    //107
         ];
         $id = 100;
         foreach ($categories as $category) {
