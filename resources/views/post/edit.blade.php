@@ -36,7 +36,7 @@ active
             <div class="form-group">
                 <label for="">Judul</label>
                 <input name="title" type="text" class=" form-control {{$errors->first('title') ? 'is-invalid':''}}"
-            value="{{$post->title}}" maxlength="190" minlength="3" required>
+                    value="{{$post->title}}" maxlength="190" minlength="3" required>
                 @error('title')
                 <div class="invalid-feedback">
                     {{$message}}
@@ -66,12 +66,14 @@ active
             </div>
             <div class="form-group">
                 <label for="">Kategori</label>
-                <select name="category_id" id="" required class="form-control {{$errors->first('category_id') ? 'is-invalid':''}}"">
+                <select name="category_id" id="" required
+                    class="form-control {{$errors->first('category_id') ? 'is-invalid':''}}"">
                     @if ($categories->isNotEmpty())
                         <option value="">Pilih kategori</option>
                         @foreach ($categories as $category)
-                            <option {{ $category->id == $post->category_id ? 'selected':''}} value="{{$category->id}}">{{$category->category}}</option>
-                        @endforeach
+                            <option {{ $category->id == $post->category_id ? 'selected':''}} value="
+                    {{$category->id}}">{{$category->category}}</option>
+                    @endforeach
                     @else
                     <option value="">Anda belum membuat kategori</option>
                     @endif
@@ -83,38 +85,48 @@ active
                 @enderror
             </div>
             <div class="row">
-                @for ($i = 0; $i < 3; $i++) 
-                <div class="col-4">
+                @for ($i = 0; $i < 3; $i++) <div class="col-4">
                     <div class="form-group">
                         <label for="">Foto {{$i+1}}</label>
                         <input type="file" name="photo_{{$i+1}}" class="form-control mb-2" accept="image/*">
                         @if (isset($post->photos()[$i]->photo))
-                            <a href="{{ asset('storage/'.$post->photos()[$i]->photo) }}">
-                                <img src="{{ asset('storage/'.$post->photos()[$i]->photo) }}" alt="photo_{{$i+1}}" width="200px">
-                            </a>
-                            <input type="hidden" name="photo_id_{{$i+1}}" value="{{$post->photos()[$i]->id}}">
+                        <a href="{{ asset('storage/'.$post->photos()[$i]->photo) }}">
+                            <img src="{{ asset('storage/'.$post->photos()[$i]->photo) }}" alt="photo_{{$i+1}}"
+                                width="200px">
+                        </a>
+                        <input type="hidden" name="photo_id_{{$i+1}}" value="{{$post->photos()[$i]->id}}">
                         @endif
                     </div>
-                </div>
-                @endfor
             </div>
-            <div class="form-group">
-                <label for="">Dokumen Pdf</label>
-                <input type="file" class="form-control" name="document" accept="application/pdf" value="{{ asset('storage/'.$post->document) }}">
-            </div>
-            <div class="form-group">
-                <label for="">Konten</label>
-                <textarea class="ckeditor {{$errors->first('content') ? 'is-invalid':''}}" id="ckedtor"  name="content">{{$content}}</textarea>
-                {{-- <textarea name="content" id="" cols="30" rows="15" class="form-control {{$errors->first('content') ? 'is-invalid':''}}"">{{$content}}</textarea> --}}
-                @error('content')
-                <div class="invalid-feedback">
-                    {{$message}}
-                </div>
-                @enderror
-            </div>
-            <button type="submit" class="btn btn-primary btn-md float-right">Simpan</button>
-            <a href="{{ route('post.index') }}" class="btn btn-secondary btn-md float-right mr-2">Kembali</a>
-        </form>
+            @endfor
     </div>
+    @if ($post->document)
+    <div class="form-group">
+        <label for="">Dokumen Pdf</label><br>
+        <a href="{{ asset('storage/' . $post->document) }}"><strong>File dokumen</strong></a>
+        <input type="file" class="form-control" name="document" accept="application/pdf">
+    </div>
+    @else
+    <div class="form-group">
+        <label for="">Dokumen Pdf</label>
+        <input type="file" class="form-control" name="document" accept="application/pdf">
+    </div>
+    @endif
+    <div class="form-group">
+        <label for="">Konten</label>
+        <textarea class="ckeditor {{$errors->first('content') ? 'is-invalid':''}}" id="ckedtor"
+            name="content">{{$content}}</textarea>
+        {{-- <textarea name="content" id="" cols="30" rows="15" class="form-control {{$errors->first('content') ? 'is-invalid':''}}"">{{$content}}</textarea>
+        --}}
+        @error('content')
+        <div class="invalid-feedback">
+            {{$message}}
+        </div>
+        @enderror
+    </div>
+    <button type="submit" class="btn btn-primary btn-md float-right">Simpan</button>
+    <a href="{{ route('post.index') }}" class="btn btn-secondary btn-md float-right mr-2">Kembali</a>
+    </form>
+</div>
 </div>
 @endsection
