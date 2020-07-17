@@ -158,6 +158,9 @@ class PostController extends Controller
         $post->user_id = $request->get('user_id');
 
         if ($request->file('document')) {
+            if ($post->document) {
+                Storage::delete('public/' . $post->document);
+            }
             $dir = "Dokumen";
             $file = $request->file("document")->store($dir, 'public');
             $post->document = $file;
