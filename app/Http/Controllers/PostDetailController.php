@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Model\Category;
 use App\Model\Content;
+use App\Model\Gallery;
 use App\Model\Photo;
 use Illuminate\Http\Request;
 
@@ -41,7 +42,7 @@ class PostDetailController extends Controller
 
     public function gallery()
     {
-        $photos = Photo::all();
+        $photos = Gallery::paginate(3);
         return view('home.gallery', ['photos' => $photos]);
     }
 }

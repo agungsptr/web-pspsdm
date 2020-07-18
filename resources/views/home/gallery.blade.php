@@ -16,6 +16,11 @@ active
             <img src="{{ asset('storage/'.$photo->photo) }}" class="card-img" width="100px" height="200px">
         </div>
         @endforeach
+
+
+        {{-- $photo->title = judul
+        $photo->description = deskripsi
+        $photo->photo = foto --}}
     </div>
 </div>
 @endsection
