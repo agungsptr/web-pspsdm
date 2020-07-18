@@ -12,7 +12,7 @@ class PostDetailController extends Controller
     public function byCategory($category_id)
     {
         $category = Category::findOrFail($category_id);
-        $posts = Content::where('category_id', $category->id)->get();
+        $posts = Content::where('category_id', $category->id)->paginate(3);
         return view('home.post.list', [
             'posts' => $posts,
             'category' => $category

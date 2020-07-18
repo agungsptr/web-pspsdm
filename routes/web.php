@@ -19,8 +19,8 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', function () {
-    $posts = Content::where("category_id",107)->get()->take(3);
-    return view('home.index',["posts"=>$posts]);
+    $posts = Content::where("category_id", 107)->get()->take(3);
+    return view('home.index', ["posts" => $posts]);
 })->name('home');
 
 // disable route '/register'
@@ -28,6 +28,9 @@ Route::match(["GET", "POST"], "/register", function () {
     return abort(404);
 });
 
+
+
+//admin page
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', function () {
         return redirect()->route("post.index");
@@ -35,6 +38,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('user', 'UserController');
     Route::resource('category', 'CategoryController');
     Route::resource('post', 'PostController');
+    Route::resource('gallery', 'GalleryController');
 });
 
 Route::group(['prefix' => 'post'], function () {
@@ -46,9 +50,12 @@ Route::group(['prefix' => 'getdata'], function () {
     Route::get('user', 'DataTableController@getUser')->name('getdata.user');
     Route::get('category', 'DataTableController@getCategory')->name('getdata.category');
     Route::get('post', 'DataTableController@getPost')->name('getdata.post');
+    Route::get('gallery', 'DataTableController@getGallery')->name('getdata.gallery');
 });
 
 
+
+//landing page
 Route::get('sejarah', function () {
     return view('home.sejarah');
 })->name('home.sejarah');
@@ -64,20 +71,18 @@ Route::get('pengalaman-proyek', function () {
 Route::get('galery', 'PostDetailController@gallery')->name('home.gallery');
 
 Route::get('buletin', function () {
-    $post = Content::all();
+    $post = Content::whereNotNull('document')->paginate(10);
     return view('home.buletin', ['files' => $post]);
 })->name('home.buletin');
 
 Route::get('program', function () {
-    $categories = Category::all();
-    return view('home.category.list', ['categories' => $categories]);
+    return view('home.category.list');
 })->name('home.list-program');
 
-Route::get('program/category/{category_id}', 'PostDetailController@byCategory')->name('home.list-category-post');
+Route::get('program/category/{category_id}', 'PostDetailController@byCategory')
+    ->name('home.list-category-post');
 
 Route::get('program/detail/{post_id}/post', function ($post_id) {
     $post = Content::findOrFail($post_id);
     return view('home.post.detail', ['post' => $post]);
-
-    // return $post->content;
 })->name('home.detail-post');

@@ -25,8 +25,9 @@
                     <p class="text-justify ellipsis2">{!!strip_tags($post->content)!!}.</p>
                 </div>
                 <div class="col-lg-2">
-                    <img src="{{ asset('storage/'.$post->photos()[0]->photo) }}" alt="No Images" 
-                        width="150" height="110">
+                    @if($post->photos()->count() > 0)
+                    <img src="{{ asset('storage/'.$post->photos()[0]->photo) }}" width="150" height="110">
+                    @endif
                 </div>
             </div>
             <span class="mr-4" style="color: #039564; font-weight: bold;">Author : {{$post->user()}}</span>
@@ -34,10 +35,16 @@
             <small>{{$post->date()}}</small>
         </a>
         @endforeach
+
+        <div class="row justify-content-center mt-3">
+            {{ $posts->links() }}
+        </div>
     </div>
     @else
     <h3 style="font-size: 14pt; color: grey">No data</h3>
     @endif
+
+    
 </div>
 
 </div>

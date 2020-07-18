@@ -13,6 +13,7 @@ class UserSeeder extends Seeder
     public function run()
     {
         $user = new User;
+        $user->id = 1;
         $user->name = "root";
         $user->username = "root";
         $user->password = \Hash::make("YJ`/3qas2]MkQ9T&");
