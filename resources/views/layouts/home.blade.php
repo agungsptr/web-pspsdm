@@ -66,16 +66,6 @@
                             <a class="dropdown-item" href="{{ route('home.pengalaman-proyek') }}">Pengalaman Proyek</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown  @yield('publikasi-active')">
-                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
-                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Publikasi
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="{{ route('home.gallery') }}">Galery</a>
-                            <a class="dropdown-item" href="{{ route('home.buletin') }}">Bulettin</a>
-                        </div>
-                    </li>
                     <li class="nav-item dropdown @yield('tentangkami-active')">
                         <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -100,6 +90,17 @@
                                 pelatihan</a>
                         </div>
                     </li>
+                    <li class="nav-item dropdown  @yield('publikasi-active')">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Publikasi
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="{{ route('home.gallery') }}">Galery</a>
+                            <a class="dropdown-item" href="{{ route('home.buletin') }}">Bulettin</a>
+                        </div>
+                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -176,7 +177,7 @@
                         </div>
                         <small>&nbsp;</small>
                         <div class="text-center">
-                            <img src="{{ asset('images/img_profile.jpeg') }}" width="150px" height="200px">
+                            <img src="{{ asset('images/direktur-pspsdm.jpeg') }}" width="150px" height="200px">
                         </div>
                         </ul>
                     </div>
