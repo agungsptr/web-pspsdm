@@ -56,7 +56,7 @@ active
             <div class="form-group">
                 <label for="">Tanggal</label>
                 <input type="datetime-local" required class="form-control {{$errors->first('date') ? 'is-invalid':''}}"
-                    name="date">
+                    name="date" value="{{old('date')}}">
                 @error('date')
                 <div class="invalid-feedback">
                     {{$message}}
@@ -67,12 +67,12 @@ active
                 <label for="">Kategori</label>
                 <select name="category_id" id="" required class="form-control">
                     @if ($categories->isNotEmpty())
-                    <option value="">Pilih kategori</option>
-                    @foreach ($categories as $category)
-                    <option value="{{$category->id}}">{{$category->category}}</option>
-                    @endforeach
+                        <option value="">Pilih kategori</option>
+                        @foreach ($categories as $category)
+                            <option {{old('category_id') == $category->id ? 'selected':''}} value="{{$category->id}}">{{$category->category}}</option>
+                        @endforeach
                     @else
-                    <option value="">Anda belum membuat kategori</option>
+                        <option value="">Anda belum membuat kategori</option>
                     @endif
                 </select>
                 @error('category_id')
@@ -99,8 +99,12 @@ active
             </div>
             <div class="form-group">
                 <label for="">Konten</label>
-                <textarea class="ckeditor" id="ckedtor"  name="content"></textarea>
-                {{-- <textarea name="content" id="" cols="30" rows="15" class="form-control"></textarea> --}}
+                <textarea class="ckeditor form-control {{$errors->first('date') ? 'is-invalid':''}}" id="ckedtor"  name="content" required></textarea>
+                @error('content')
+                <div class="small mt-1" style="color: red">
+                    {{$message}}
+                </div>
+                @enderror
             </div>
             <button type="submit" class="btn btn-primary btn-md float-right">Simpan</button>
         </form>

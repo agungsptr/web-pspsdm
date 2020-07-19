@@ -8,11 +8,10 @@ active
 
 <h5 class="judul-section " style="font-family:OpenSans-Bold;font-size:25px; font-weight: normal;">
     <strong>Buletin</strong></h5>
-<div class="garis mb-5"></div><br>
+<div class="garis mb-5"></div>
 <div class="container">
     <ul class="list-unstyled">
         @foreach ($files as $file)
-        @if (!empty($file->document))
         <a target="_blank" href="{{ asset('storage/'.$file->document) }}" >
             <li class="media">
                 <div class="media-body">
@@ -21,9 +20,12 @@ active
                 </div>
             </li>
         </a>
-        @endif
         @endforeach
     </ul>
+
+    <div class="row justify-content-center">
+        {{ $files->links() }}
+    </div>
 </div>
 <p>&nbsp;</p>
 @endsection

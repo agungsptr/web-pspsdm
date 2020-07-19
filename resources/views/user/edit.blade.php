@@ -5,7 +5,7 @@ Manage User
 @endsection
 
 @section('title-card')
-Tambah User
+Edit User
 @endsection
 
 @section('menu-user')

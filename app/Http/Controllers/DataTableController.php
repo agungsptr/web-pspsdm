@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Model\Gallery;
 use App\Model\Category;
 use App\Model\Content;
 use App\User;
@@ -13,7 +14,7 @@ class DataTableController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     public function getUser()
     {
         return datatables()->of(User::all())
@@ -39,10 +40,10 @@ class DataTableController extends Controller
     public function getPost()
     {
         return datatables()->of(Content::all())
-            ->addColumn('user', function ($post){
+            ->addColumn('user', function ($post) {
                 return $post->user();
             })
-            ->addColumn('category', function ($post){
+            ->addColumn('category', function ($post) {
                 return $post->category();
             })
             ->addColumn('aksi', function ($post) {
@@ -50,6 +51,22 @@ class DataTableController extends Controller
                     . '<button type="button" class="btn btn-danger btn-sm btn-delete" data-remote="' . route('post.destroy', ['post' => $post->id]) . '">Delete</button>';
             })
             ->rawColumns(['aksi'])
+            ->toJson();
+    }
+
+    public function getGallery()
+    {
+        return datatables()->of(Gallery::all())
+            ->addColumn('file_photo', function ($gallery) {
+                $photo = 'storage/' . $gallery->photo;
+                $img = '<a href="' . asset($photo) . '"><img src="' . asset($photo) . '" width="100px"></a>';
+                return $img;
+            })
+            ->addColumn('aksi', function ($gallery) {
+                return '<a href="' . route('gallery.edit', ['gallery' => $gallery->id]) . '" class="btn btn-warning btn-sm mr-2">Edit</a>'
+                    . '<button type="button" class="btn btn-danger btn-sm btn-delete" data-remote="' . route('gallery.destroy', ['gallery' => $gallery->id]) . '">Delete</button>';
+            })
+            ->rawColumns(['aksi', 'file_photo'])
             ->toJson();
     }
 }
