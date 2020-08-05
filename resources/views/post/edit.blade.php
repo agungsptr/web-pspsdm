@@ -100,18 +100,22 @@ active
             </div>
             @endfor
     </div>
-    @if ($post->document)
     <div class="form-group">
         <label for="">Dokumen Pdf</label><br>
+        @if ($post->document)
         <a href="{{ asset('storage/' . $post->document) }}"><strong>File dokumen</strong></a>
+        @endif
         <input type="file" class="form-control" name="document" accept="application/pdf">
     </div>
-    @else
     <div class="form-group">
-        <label for="">Dokumen Pdf</label>
-        <input type="file" class="form-control" name="document" accept="application/pdf">
+        <label for="">Cover Dokumen</label><br>
+        @if ($post->cover_doc)
+        <a href="{{ asset('storage/' . $post->cover_doc) }}">
+            <img src="{{ asset('storage/' . $post->cover_doc) }}" alt="cover_img" width="200px">
+        </a>
+        @endif
+        <input type="file" class="form-control" name="cover_doc" accept="image/*">
     </div>
-    @endif
     <div class="form-group">
         <label for="">Konten</label>
         <textarea class="ckeditor {{$errors->first('content') ? 'is-invalid':''}}" id="ckedtor"

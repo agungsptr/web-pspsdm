@@ -98,6 +98,10 @@ active
                 <input type="file" class="form-control" name="document" accept="application/pdf">
             </div>
             <div class="form-group">
+                <label for="">Cover Dokumen</label>
+                <input type="file" class="form-control" name="cover_doc" accept="image/*">
+            </div>
+            <div class="form-group">
                 <label for="">Konten</label>
                 <textarea class="ckeditor form-control {{$errors->first('date') ? 'is-invalid':''}}" id="ckedtor"  name="content" required></textarea>
                 @error('content')

@@ -75,6 +75,12 @@ class PostController extends Controller
             $post->document = $file;
         }
 
+        if ($request->file('cover_doc')) {
+            $dir = "Dokumen/cover";
+            $file = $request->file("cover_doc")->store($dir, 'public');
+            $post->cover_doc = $file;
+        }
+
         $post->save();
 
         for ($i = 1; $i <= 3; $i++) {
@@ -161,6 +167,15 @@ class PostController extends Controller
             $dir = "Dokumen";
             $file = $request->file("document")->store($dir, 'public');
             $post->document = $file;
+        }
+
+        if ($request->file('cover_doc')) {
+            if ($post->cover_doc) {
+                Storage::delete('public/' . $post->cover_doc);
+            }
+            $dir = "Dokumen/cover";
+            $file = $request->file("cover_doc")->store($dir, 'public');
+            $post->cover_doc = $file;
         }
 
         $post->save();
