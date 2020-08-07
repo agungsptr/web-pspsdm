@@ -17,10 +17,11 @@ class CreateContentsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('title');
-            $table->string('subtitle')->nullable();
+            $table->text('subtitle')->nullable();
             $table->mediumText('content')->nullable();
             $table->timestamp('date')->nullable();
             $table->string('document', 255)->nullable();
+            $table->text('content_photos')->nullable();
             $table->string('cover_doc', 255)->nullable();
             $table->bigInteger('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories');

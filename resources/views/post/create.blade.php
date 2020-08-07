@@ -67,12 +67,13 @@ active
                 <label for="">Kategori</label>
                 <select name="category_id" id="" required class="form-control">
                     @if ($categories->isNotEmpty())
-                        <option value="">Pilih kategori</option>
-                        @foreach ($categories as $category)
-                            <option {{old('category_id') == $category->id ? 'selected':''}} value="{{$category->id}}">{{$category->category}}</option>
-                        @endforeach
+                    <option value="">Pilih kategori</option>
+                    @foreach ($categories as $category)
+                    <option {{old('category_id') == $category->id ? 'selected':''}} value="{{$category->id}}">
+                        {{$category->category}}</option>
+                    @endforeach
                     @else
-                        <option value="">Anda belum membuat kategori</option>
+                    <option value="">Anda belum membuat kategori</option>
                     @endif
                 </select>
                 @error('category_id')
@@ -81,17 +82,24 @@ active
                 </div>
                 @enderror
             </div>
-            <div class="form-group">
-                <label for="">Foto 1</label>
-                <input type="file" name="photo_1" class="form-control" accept="image/*">
-            </div>
-            <div class="form-group">
-                <label for="">Foto 2</label>
-                <input type="file" name="photo_2" class="form-control" accept="image/*">
-            </div>
-            <div class="form-group">
-                <label for="">Foto 3</label>
-                <input type="file" name="photo_3" class="form-control" accept="image/*">
+            <div>
+                <div class="form-group">
+                    <label for="">Foto Header</label>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="">Foto 1</label>
+                            <input type="file" name="photo_1" class="form-control" accept="image/*">
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="">Foto 2</label>
+                            <input type="file" name="photo_2" class="form-control" accept="image/*">
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="">Foto 3</label>
+                            <input type="file" name="photo_3" class="form-control" accept="image/*">
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <label for="">Dokumen Pdf</label>
@@ -103,7 +111,8 @@ active
             </div>
             <div class="form-group">
                 <label for="">Konten</label>
-                <textarea class="ckeditor form-control {{$errors->first('date') ? 'is-invalid':''}}" id="ckedtor"  name="content" required></textarea>
+                <textarea class="ckeditor form-control {{$errors->first('date') ? 'is-invalid':''}}" id="ckedtor"
+                    name="content" required></textarea>
                 @error('content')
                 <div class="small mt-1" style="color: red">
                     {{$message}}
