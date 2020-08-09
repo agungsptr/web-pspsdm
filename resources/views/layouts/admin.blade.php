@@ -144,7 +144,6 @@
                                 </li>
                             </ul>
                         </li>
-                        @endif
 
                         <li class="nav-header">GALLERY</li>
                         <li class="nav-item has-treeview menu-open">
@@ -173,6 +172,7 @@
                                 </li>
                             </ul>
                         </li>
+                        @endif
 
                         @if (Auth::user())
                         <li class="nav-header">USER</li>
@@ -283,6 +283,25 @@
     <script type="text/javascript" charset="utf8" src="{{ asset('vendor/DataTables/datatables.js') }}"></script>
 
     @yield('script')
+
+    <script>
+        function changeAction(val){
+            if (val == 101 || val == 102) {
+                document.getElementById("ph1").disabled = true;
+                document.getElementById("ph2").disabled = true;
+                document.getElementById("ph3").disabled = true;
+                document.getElementById("file").disabled = true;
+                document.getElementById("file_cover").disabled = true;
+            } else {
+                document.getElementById("ph1").disabled = false;
+                document.getElementById("ph2").disabled = false;
+                document.getElementById("ph3").disabled = false;
+                document.getElementById("file").disabled = false;
+                document.getElementById("file_cover").disabled = false;
+                document.getElementById("photos").disabled = true;
+            }
+        }
+    </script>
 
     <script>
         function isInputNumber(evt) {

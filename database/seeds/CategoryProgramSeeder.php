@@ -13,14 +13,15 @@ class CategoryProgramSeeder extends Seeder
     public function run()
     {
         $categories = [
-            'Agro Forestry',            //100
-            'Kesehatan',                //101
-            'Air Bersih',               //102
-            'Pertanian',                //103
-            'Pendidikan',               //104
-            'Proyek Padat Karya',       //105      
-            'Penelitian & Pelatihan',   //106
-            'Berita'                    //107
+            'Pemberdayaan Perempuan',             //100
+            'Kesehatan',                          //101
+            'Air Bersih',                         //102
+            'Pertanian',                          //103
+            'Pendidikan',                         //104
+            'Padat Karya',                        //105      
+            'Penelitian & Pelatihan',             //106
+            'Berita',                             //107
+            'Usaha Ekonomi Produktif',            //108
         ];
         $id = 100;
         foreach ($categories as $category) {

@@ -55,7 +55,7 @@ Route::group(['prefix' => 'getdata'], function () {
 
 
 
-//landing page
+//profile page
 Route::get('sejarah', function () {
     return view('home.sejarah');
 })->name('home.sejarah');
