@@ -38,7 +38,7 @@
 
 <body class="bg-white" style="font-family: 'Montserrat', sans-serif;">
     {{-- Navbar --}}
-    <nav class="navbar navbar-expand-lg navbar-light bg-green fixed-top shadow-sm tew">
+    <nav class="navbar navbar-expand-lg navbar-light bg-green  shadow-sm tew">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{ asset('images/pspsdm-logo.png') }}" width="50" height="50" class="d-inline-block align-top"
@@ -74,11 +74,11 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item"
-                                href="{{ route('home.list-category-post', ['category_id'=>100]) }}">Pertanian</a>
+                                href="{{ route('home.pk.pertanian') }}">Pertanian</a>
                             <a class="dropdown-item"
                                 href="{{ route('home.list-category-post', ['category_id'=>101]) }}">Kesehatan</a>
                             <a class="dropdown-item"
-                                href="{{ route('home.list-category-post', ['category_id'=>102]) }}">Air bersih</a>
+                                href="{{ route('home.pk.airbersih') }}">Air bersih</a>
                             <a class="dropdown-item"
                                 href="{{ route('home.list-category-post', ['category_id'=>103]) }}">Pendidikan</a>
                             <a class="dropdown-item"
@@ -87,6 +87,10 @@
                                 href="{{ route('home.list-category-post', ['category_id'=>105]) }}">Usaha ekonomi produktif</a>
                             <a class="dropdown-item"
                                 href="{{ route('home.list-category-post', ['category_id'=>106]) }}">Hutan Kemasyarakatan</a>
+                            <a class="dropdown-item"
+                                href="{{ route('home.list-category-post', ['category_id'=>106]) }}">Padat Karya</a>
+                            <a class="dropdown-item"
+                                href="{{ route('home.list-category-post', ['category_id'=>106]) }}">Penelitian dan pelatihan</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown  @yield('publikasi-active')">

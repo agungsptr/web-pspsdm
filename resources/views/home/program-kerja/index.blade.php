@@ -14,11 +14,11 @@
 
     <div class="row">
         <div class="col-lg-3" style="margin-bottom: 15px">
-            <a href="{{ route('home.list-category-post', ['category_id'=>100]) }}" style="text-decoration: none">
+            <a href="{{ route('home.list-category-post', ['category_id'=>103]) }}" style="text-decoration: none">
                 <div class="card shadow" style="width: 15rem;">
-                    <img src="{{ asset('images/Agroforestry.png') }}" class="card-img-top mb-3" alt="...">
+                    <img src="{{ asset('images/pertanian.png') }}" class="card-img-top mb-3" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Agroforestry</h5>
+                        <h5 class="card-title">Pertanian</h5>
                     </div>
                 </div>
             </a>
@@ -43,16 +43,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-lg-3" style="margin-bottom: 15px">
-            <a href="{{ route('home.list-category-post', ['category_id'=>103]) }}" style="text-decoration: none">
-                <div class="card shadow" style="width: 15rem;">
-                    <img src="{{ asset('images/pertanian.png') }}" class="card-img-top mb-3" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Pertanian</h5>
-                    </div>
-                </div>
-            </a>
-        </div>
+        
         <div class="col-lg-3" style="margin-bottom: 15px">
             <a href="{{ route('home.list-category-post', ['category_id'=>104]) }}" style="text-decoration: none">
                 <div class="card shadow" style="width: 15rem;">
@@ -63,12 +54,46 @@
                 </div>
             </a>
         </div>
+
+        <div class="col-lg-3" style="margin-bottom: 15px">
+            <a href="{{ route('home.list-category-post', ['category_id'=>104]) }}" style="text-decoration: none">
+                <div class="card shadow" style="width: 15rem;">
+                    <img src="https://via.placeholder.com/150" class="card-img-top mb-3" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pemberdayaan perempuan</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3" style="margin-bottom: 15px">
+            <a href="{{ route('home.list-category-post', ['category_id'=>104]) }}" style="text-decoration: none">
+                <div class="card shadow" style="width: 15rem;">
+                    <img src="https://via.placeholder.com/150" class="card-img-top mb-3" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Usaha ekonomi produktif</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3" style="margin-bottom: 15px">
+            <a href="{{ route('home.list-category-post', ['category_id'=>100]) }}" style="text-decoration: none">
+                <div class="card shadow" style="width: 15rem;">
+                    <img src="{{ asset('images/Agroforestry.png') }}" class="card-img-top mb-3" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Hutan Kemasyarakatan</h5>
+                    </div>
+                </div>
+            </a>
+        </div>     
+
         <div class="col-lg-3" style="margin-bottom: 15px">
             <a href="{{ route('home.list-category-post', ['category_id'=>105]) }}" style="text-decoration: none">
                 <div class="card shadow" style="width: 15rem;">
                     <img src="{{ asset('images/proyek.png') }}" class="card-img-top mb-3" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Proyek Padat Karya</h5>
+                        <h5 class="card-title">Padat Karya</h5>
                     </div>
                 </div>
             </a>
@@ -82,7 +107,8 @@
                     </div>
                 </div>
             </a>
-        </div>      
+        </div>
+         
     </div>
 
 </div>
