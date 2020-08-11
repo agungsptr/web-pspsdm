@@ -60,7 +60,7 @@
     </div>
 
     <div class="card mb-3 shadow">
-        <h6 class="mb-3 mt-3 ml-2 card-title" style="font-weight: bold">Program Air Bersih Untuk Lokasi</h6>
+        <h6 class="mb-3 mt-3 ml-2 card-title" style="font-weight: bold">Program Pertanian</h6>
         <p class="card-text ml-3">This is a longer card with supporting text below as a natural lead-in to additional
             content. This content is a little bit longer.</p>
         <div id="carouselExampleControls" class="card-body carousel slide bg-transparent" data-ride="carousel">

@@ -65,6 +65,8 @@ Route::get('air-bersih', 'ProgramKerjaController@AirBersih')->name('home.pk.airb
 Route::get('pendidikan', 'ProgramKerjaController@Pendidikan')->name('home.pk.pendidikan');
 Route::get('pemberdayaan-perempuan', 'ProgramKerjaController@PemberdayaanPerempuan')->name('home.pk.pp');
 Route::get('usaha-ekonomi-produktif', 'ProgramKerjaController@UsahaEkonomiProduktif')->name('home.pk.uep');
+// disini hkm
+Route::get('hutan-kemasyarakatan','ProgramKerjaController@HutanKemasyarakatan')->name('home.pk.hkm');
 Route::get('padat-karya', 'ProgramKerjaController@PadatKarya')->name('home.pk.padatkarya');
 Route::get('penelitian-dan-pelatihan', 'ProgramKerjaController@Pertanian')->name('home.pk.pdp');
 

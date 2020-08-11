@@ -1,7 +1,7 @@
 @extends('layouts.home')
 @section('header')
 {{-- slider --}}
-<img src="{{ asset('images/Header1.png') }}" class="img-fluid" alt="Responsive image">
+<img src="https://via.placeholder.com/1500x500?text=Header" class="img-fluid mb-5" alt="Responsive image">
 <p>&nbsp;</p>
 <div class="container">
     <h5 class="judul-section " style="font-family:OpenSans-Bold;font-size:25px; font-weight: normal;">
@@ -70,6 +70,7 @@
     <h5 class="judul-section" style="font-family:OpenSans-Bold;font-size:25px; font-weight: normal;">
         <strong>Lokasi Kerja</strong></h5>
     <div class="garis mb-5"></div>
+    <img src="https://via.placeholder.com/1500x500?text=Lokasi Kerja" class="img-fluid mb-5" alt="Responsive image">
 
 
 </div>

@@ -1,42 +1,47 @@
 @extends('layouts.home')
-@section('publikasi-active')
-active
-@endsection
-@section('header')
-{{-- slider --}}
-<img src="{{ asset('images/hutan.png') }}" class="img-fluid mb-5" alt="Responsive image">
 
-<h5 class="judul-section " style="font-family:OpenSans-Bold;font-size:25px; font-weight: normal;">
-    <strong>Buletin</strong></h5>
-<div class="garis mb-5"></div>
-<div class="container">
-    <ul class="list-unstyled">
-        <div class="row">
-            @foreach ($files as $file)
-            {{-- <a target="_blank" href="{{ asset('storage/'.$file->document) }}">
-            <li class="media">
-                <div class="media-body">
-                    <i class="fas fa-file-pdf fa-2x mr-3" style="color: red"></i>
-                    <span class="mt-0 mb-1 text-black" style="font-size: 14pt">{{$file->title}}</span>
-                </div>
-            </li>
-            </a> --}}
-            <div class="card" style="width: 12rem;">
-                <img class="card-img-top" src="{{ asset('storage/'.$file->cover_doc) }}" alt="cover" height="150px">
-                <div class="card-body">
-                    <h5 class="card-title">{{$file->title}}</h5>
-                </div>
-                <div class="card-footer">
-                    <a href="{{ asset('storage/'.$file->document) }}" class="btn btn-primary">Download</a>
+@section('header')
+<img src="https://via.placeholder.com/1500x500?text=Header" class="img-fluid mb-5" alt="Responsive image">
+{{-- content --}}
+{{-- <div class="container mb-5"> --}}
+    <h4 class="font-weight-bold text-center">Bulettin Title</h4>
+    <div id="carouselExampleControls" class="carousel slide mb-3 p-5" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card-deck">
+                    <div class="card">
+                        <img class="card-img-top" src="https://via.placeholder.com/150x250/000000/FFFFFF/?text=IPaddress.net"
+                            alt="Card image cap">
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="https://via.placeholder.com/150x250/000000/FFFFFF/?text=IPaddress.net"
+                            alt="Card image cap">
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="https://via.placeholder.com/150x250/000000/FFFFFF/?text=IPaddress.net"
+                            alt="Card image cap">
+                    </div>
                 </div>
             </div>
-            @endforeach
         </div>
-    </ul>
-
-    <div class="row justify-content-center">
-        {{ $files->links() }}
+        {{-- previus and next --}}
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-</div>
-<p>&nbsp;</p>
+    <nav aria-label="Page navigation example" class="justify-content-center">
+        <ul class="pagination justify-content-center">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+{{-- </div> --}}
 @endsection

@@ -76,21 +76,21 @@
                             <a class="dropdown-item"
                                 href="{{ route('home.pk.pertanian') }}">Pertanian</a>
                             <a class="dropdown-item"
-                                href="{{ route('home.list-category-post', ['category_id'=>101]) }}">Kesehatan</a>
+                                href="{{ route('home.pk.kesehatan') }}">Kesehatan</a>
                             <a class="dropdown-item"
                                 href="{{ route('home.pk.airbersih') }}">Air bersih</a>
                             <a class="dropdown-item"
-                                href="{{ route('home.list-category-post', ['category_id'=>103]) }}">Pendidikan</a>
+                                href="{{ route('home.pk.pendidikan') }}">Pendidikan</a>
                             <a class="dropdown-item"
-                                href="{{ route('home.list-category-post', ['category_id'=>104]) }}">Pemberdayaan perempuan</a>
+                                href="{{ route('home.pk.pp') }}">Pemberdayaan perempuan</a>
                             <a class="dropdown-item"
-                                href="{{ route('home.list-category-post', ['category_id'=>105]) }}">Usaha ekonomi produktif</a>
+                                href="{{ route('home.pk.uep') }}">Usaha ekonomi produktif</a>
                             <a class="dropdown-item"
-                                href="{{ route('home.list-category-post', ['category_id'=>106]) }}">Hutan Kemasyarakatan</a>
+                                href="{{ route('home.pk.hkm') }}">Hutan Kemasyarakatan</a>
                             <a class="dropdown-item"
-                                href="{{ route('home.list-category-post', ['category_id'=>106]) }}">Padat Karya</a>
+                                href="{{ route('home.pk.padatkarya') }}">Padat Karya</a>
                             <a class="dropdown-item"
-                                href="{{ route('home.list-category-post', ['category_id'=>106]) }}">Penelitian dan pelatihan</a>
+                                href="{{ route('home.pk.pdp') }}">Penelitian dan pelatihan</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown  @yield('publikasi-active')">

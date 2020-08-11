@@ -1,12 +1,12 @@
 @extends('layouts.home')
 
 @section('header')
-<img src="{{ asset('images/hutan.png') }}" class="img-fluid" alt="Responsive image">
-<p>&nbsp;</p>
+<img src="https://via.placeholder.com/1500x500?text=Header" class="img-fluid mb-5" alt="Responsive image">
+{{-- content --}}
 <div class="container">
     <h5 class="font-body font-justify"><span style="color:grey">
             <span class="font-body-title" style="font-size: 18pt;">
-                <strong>Post dengan kategori "{{$category->category}}"</strong>
+                <strong>"{{$category->category}}"</strong>
             </span>
     </h5>
     <br>

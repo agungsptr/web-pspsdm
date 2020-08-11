@@ -36,6 +36,11 @@ class ProgramKerjaController extends Controller
         return view('home.program-kerja.usahaekonomi');
     }
 
+    public function HutanKemasyarakatan()
+    {
+        return view('home.program-kerja.hutankemasyarakatan');
+    }
+
     public function PadatKarya()
     {
         return view('home.program-kerja.padatkarya');

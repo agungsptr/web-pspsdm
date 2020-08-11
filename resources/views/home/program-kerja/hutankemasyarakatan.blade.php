@@ -3,7 +3,7 @@
 @section('header')
 <img src="https://via.placeholder.com/1500x500?text=Header" class="img-fluid mb-5" alt="Responsive image">
 {{-- content --}}
-<h1 class="mb-3 text-center" style="font-weight: bold">Program Usaha Ekonomi Produktif</h1>
+<h1 class="mb-3 text-center" style="font-weight: bold">Program Hutan Kemasyarakatan</h1>
 <div class="garis mb-5"></div>
 <div id="carouselExampleControls" class="carousel slide bg-green mb-3 p-5" data-ride="carousel">
     <div class="carousel-inner">
@@ -60,7 +60,7 @@
     </div>
 
     <div class="card mb-3 shadow">
-        <h6 class="mb-3 mt-3 ml-2 card-title" style="font-weight: bold">Program Usaha Ekonomi Produktif</h6>
+        <h6 class="mb-3 mt-3 ml-2 card-title" style="font-weight: bold">Hutan Kemasyarakatan</h6>
         <p class="card-text ml-3">This is a longer card with supporting text below as a natural lead-in to additional
             content. This content is a little bit longer.</p>
         <div id="carouselExampleControls" class="card-body carousel slide bg-transparent" data-ride="carousel">

@@ -3,7 +3,7 @@
 @section('header')
 <img src="https://via.placeholder.com/1500x500?text=Header" class="img-fluid mb-5" alt="Responsive image">
 {{-- content --}}
-<h1 class="mb-3 text-center" style="font-weight: bold">Program Air Bersih</h1>
+<h1 class="mb-3 text-center" style="font-weight: bold">Program Kesehatan</h1>
 <div class="garis mb-5"></div>
 <div id="carouselExampleControls" class="carousel slide bg-green mb-3 p-5" data-ride="carousel">
     <div class="carousel-inner">
@@ -60,7 +60,7 @@
     </div>
 
     <div class="card mb-3 shadow">
-        <h6 class="mb-3 mt-3 ml-2 card-title" style="font-weight: bold">Program Air Bersih Untuk Lokasi</h6>
+        <h6 class="mb-3 mt-3 ml-2 card-title" style="font-weight: bold">Program Kesehatan Untuk Lokasi</h6>
         <div id="carouselExampleControls" class="card-body carousel slide bg-transparent" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
