@@ -91,6 +91,7 @@ active
                 {data:'user'},
                 {data:'aksi', sortable:false},
             ],
+            order: [ 2, "desc" ],
         });
 
         $('#table_id tbody').on('click', 'button', function () {

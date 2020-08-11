@@ -48,14 +48,14 @@ class PostController extends Controller
             [
                 'title' => "required",
                 'date' => "required",
-                'content' => "required",
+                // 'content' => "required",
                 'category_id' => "required",
                 'user_id' => "required",
             ],
             [
                 'title.required' => 'Judul harus diisi',
                 'date.required' => 'Tanggal harus diisi',
-                'content.required' => 'Konten harus diisi',
+                // 'content.required' => 'Konten harus diisi',
                 'category.required' => 'Kategori harus diisi',
                 'user_id.required' => 'User harus diisi login',
             ]
@@ -75,12 +75,27 @@ class PostController extends Controller
             $post->document = $file;
         }
 
+        if ($request->file('cover_doc')) {
+            $dir = "Dokumen/cover";
+            $file = $request->file("cover_doc")->store($dir, 'public');
+            $post->cover_doc = $file;
+        }
+
+        if ($request->hasfile('photos')) {
+            $dir = "Foto";
+            foreach ($request->file('photos') as $img) {
+                $name = $img->store($dir, 'public');
+                $imgs[] = $name;
+            }
+            $post->content_photos = json_encode($imgs);
+        }
+
         $post->save();
 
         for ($i = 1; $i <= 3; $i++) {
             if ($request->file("photo_" . $i)) {
                 $photo = new Photo;
-                $dir = "Foto";
+                $dir = "Foto-Header";
                 $file = $request->file("photo_" . $i)->store($dir, 'public');
                 $photo->photo = $file;
                 $photo->content_id = $post->id;
@@ -115,7 +130,6 @@ class PostController extends Controller
 
         return view('post.edit', [
             'post' => $post,
-            'categories' => $categories,
             'content' => $post->content
         ]);
     }
@@ -133,14 +147,14 @@ class PostController extends Controller
             [
                 'title' => "required",
                 'date' => "required",
-                'content' => "required",
+                // 'content' => "required",
                 'category_id' => "required",
                 'user_id' => "required",
             ],
             [
                 'title.required' => 'Judul harus diisi',
                 'date.required' => 'Tanggal harus diisi',
-                'content.required' => 'Konten harus diisi',
+                // 'content.required' => 'Konten harus diisi',
                 'category.required' => 'Kategori harus diisi',
                 'user_id.required' => 'User harus diisi login',
             ]
@@ -161,6 +175,15 @@ class PostController extends Controller
             $dir = "Dokumen";
             $file = $request->file("document")->store($dir, 'public');
             $post->document = $file;
+        }
+
+        if ($request->file('cover_doc')) {
+            if ($post->cover_doc) {
+                Storage::delete('public/' . $post->cover_doc);
+            }
+            $dir = "Dokumen/cover";
+            $file = $request->file("cover_doc")->store($dir, 'public');
+            $post->cover_doc = $file;
         }
 
         $post->save();
