@@ -14,7 +14,6 @@
     {{-- stysheet --}}
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/mycss.css') }}">
     {{-- font family --}}
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
@@ -73,7 +72,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item"
-                                href="{{ route('home.list-category-post', ['category_id'=>100]) }}">Agro forestry</a>
+                                href="{{ route('home.list-category-post', ['category_id'=>100]) }}">Pertanian</a>
                             <a class="dropdown-item"
                                 href="{{ route('home.list-category-post', ['category_id'=>101]) }}">Kesehatan</a>
                             <a class="dropdown-item"
@@ -96,7 +95,6 @@
                             Publikasi
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="{{ route('home.gallery') }}">Galery</a>
                             <a class="dropdown-item" href="{{ route('home.buletin') }}">Bulettin</a>
                         </div>
                     </li>
@@ -213,7 +211,6 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/scroll.js') }}"></script>
 </body>
 
 </html>
