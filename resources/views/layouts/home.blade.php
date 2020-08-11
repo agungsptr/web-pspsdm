@@ -52,7 +52,8 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item @yield('home-active')">
-                        <a class="nav-link text-white" href="{{ route('home.list-category-post', ['category_id'=>107]) }}">Berita <span
+                        <a class="nav-link text-white"
+                            href="{{ route('home.list-category-post', ['category_id'=>107]) }}">Berita <span
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown @yield('tentangkami-active')">
@@ -72,7 +73,7 @@
                             Publikasi
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="{{ route('home.gallery') }}">Galery</a>
+                            {{-- <a class="dropdown-item" href="{{ route('home.gallery') }}">Galery</a> --}}
                             <a class="dropdown-item" href="{{ route('home.buletin') }}">Bulettin</a>
                         </div>
                     </li>
@@ -104,20 +105,15 @@
             </div>
         </div>
     </nav>
-    {{-- content --}}
 
+    {{-- content --}}
     @yield('header')
 
-
-
-
     {{-- Footer --}}
-
     <footer class="bg-green">
         <div class="container">
             <div class="space-top-2 space-bottom-1 space-bottom-lg-2">
                 <div class="row justify-content-lg-between">
-                    {{-- col-6 col-md-3 col-lg mb-5 mb-lg-0 --}}
                     <div class="col-lg-6 col-md-3 col-lg mb-5 mb-lg-0">
                         <ul class="list-group list-group-flush text-white">
                             <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-20px-bottom font-weight-600 follow-us font-body-title"
@@ -125,50 +121,50 @@
                                     style="color: white">Informasi</span>
                             </div>
                             <small>&nbsp;</small>
-                            <li class="list-unstyled"> <span class="media">
+                            <li class="list-unstyled">
+                                <span class="media">
                                     <span class="fas fa-location-arrow mt-1 mr-2" style="color: white"></span>
                                     <span class="media-body" style="color: white">
                                         Jl. Madiun 14 BTN Taman Baru - Mataram, NTB
                                     </span>
-                                </span></li>
-                            <li class="list-unstyled"> <span class="media">
+                                </span>
+                            </li>
+                            <li class="list-unstyled">
+                                <span class="media">
                                     <span class="fas fa-phone-alt mt-1 mr-2" style="color: white"></span>
                                     <span class="media-body" style="color: white">
                                         +628 175 78 0009
                                     </span>
-                                </span></li>
-                            <li class="list-unstyled"> <span class="media">
+                                </span>
+                            </li>
+                            <li class="list-unstyled">
+                                <span class="media">
                                     <span class="fas fa-paper-plane mt-1 mr-2" style="color: white"></span>
                                     <span class="media-body" style="color: white">
                                         pspsdm.lombok@gmail.com
                                     </span>
-                                </span></li>
+                                </span>
+                            </li>
                         </ul>
                     </div>
-                    {{-- end col-6 col-md-3 col-lg mb-5 mb-lg-0 --}}
 
-                    {{-- col-6 col-md-3 col-lg mb-5 mb-lg-0 --}}
                     <div class="col-lg-4 col-md-3 col-lg mb-5 mb-lg-0">
                         <ul class="list-group list-group-flush text-white"
                             style="font-family:PFDinTextCompPro-Medium;font-size:16px; font-weight: normal;">
-                            <li class="list-unstyled">
+                            {{-- <li class="list-unstyled">
                                 <a href="{{ route('home.gallery') }}" style="color: white">GALERY</a>
+                            </li> --}}
+                            <small>&nbsp;</small>
+                            <li class="list-unstyled">
+                                <a href="{{ route('home.program-kerja') }}" style="color: white">PROGRAM</a>
                             </li>
                             <small>&nbsp;</small>
                             <li class="list-unstyled">
-                                <a href="{{ route('home.list-program') }}"
-                                    style="color: white">PROGRAM</a>
-                            </li>
-                            <small>&nbsp;</small>
-                            <li class="list-unstyled">
-                                <a href="{{ route('home.buletin') }}"
-                                    style="color: white">BULETIN</a>
+                                <a href="{{ route('home.buletin') }}" style="color: white">BULETIN</a>
                             </li>
                         </ul>
                     </div>
-                    {{-- end col-6 col-md-3 col-lg mb-5 mb-lg-0 --}}
 
-                    {{-- col-6 col-md-3 col-lg mb-5 mb-lg-0 --}}
                     <div class="col-lg-2 col-md-3 col-lg mb-5 mb-lg-0 text-center">
                         <div class="widget-title alt-font text-white text-small text-medium-gray text-uppercase margin-20px-bottom font-weight-600 follow-us font-body-title"
                             style="font-family:PFDinTextCompPro-Medium;font-size:16px; font-weight: normal;"><span
@@ -180,7 +176,6 @@
                         </div>
                         </ul>
                     </div>
-                    {{-- end col-6 col-md-3 col-lg mb-5 mb-lg-0 --}}
                 </div>
             </div>
             <hr class="opacity-xs my-0" style="border-color: white">
