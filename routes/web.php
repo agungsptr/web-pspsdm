@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Auth::routes();
 // disable route '/register'
 Route::match(["GET", "POST"], "/register", function () {

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Content;
 use Illuminate\Http\Request;
 
 class ProgramKerjaController extends Controller
@@ -18,7 +19,8 @@ class ProgramKerjaController extends Controller
 
     public function AirBersih()
     {
-        return view('home.program-kerja.airbersih');
+        $posts = Content::where('category_id', 102)->get();
+        return view('home.program-kerja.airbersih', ['posts' => $posts]);
     }
 
     public function Pendidikan()
@@ -45,5 +47,4 @@ class ProgramKerjaController extends Controller
     {
         return view('home.program-kerja.pelatihanpenelitian');
     }
-
 }
