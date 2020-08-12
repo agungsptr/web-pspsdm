@@ -14,7 +14,6 @@
     {{-- stysheet --}}
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/mycss.css') }}">
     {{-- font family --}}
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
@@ -39,7 +38,7 @@
 
 <body class="bg-white" style="font-family: 'Montserrat', sans-serif;">
     {{-- Navbar --}}
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm tew">
+    <nav class="navbar navbar-expand-lg navbar-light bg-green  shadow-sm tew">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{ asset('images/pspsdm-logo.png') }}" width="50" height="50" class="d-inline-block align-top"
@@ -67,16 +66,7 @@
                             <a class="dropdown-item" href="{{ route('home.pengalaman-proyek') }}">Pengalaman Proyek</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown  @yield('publikasi-active')">
-                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
-                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Publikasi
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            {{-- <a class="dropdown-item" href="{{ route('home.gallery') }}">Galery</a> --}}
-                            <a class="dropdown-item" href="{{ route('home.buletin') }}">Bulettin</a>
-                        </div>
-                    </li>
+
                     <li class="nav-item dropdown @yield('tentangkami-active')">
                         <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -84,23 +74,35 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item"
-                                href="{{ route('home.list-category-post', ['category_id'=>100]) }}">Agro forestry</a>
+                                href="{{ route('home.pk.pertanian') }}">Pertanian</a>
                             <a class="dropdown-item"
-                                href="{{ route('home.list-category-post', ['category_id'=>101]) }}">Kesehatan</a>
+                                href="{{ route('home.pk.kesehatan') }}">Kesehatan</a>
                             <a class="dropdown-item"
-                                href="{{ route('home.list-category-post', ['category_id'=>102]) }}">Air bersih</a>
+                                href="{{ route('home.pk.airbersih') }}">Air bersih</a>
                             <a class="dropdown-item"
-                                href="{{ route('home.list-category-post', ['category_id'=>103]) }}">Pertanian</a>
+                                href="{{ route('home.pk.pendidikan') }}">Pendidikan</a>
                             <a class="dropdown-item"
-                                href="{{ route('home.list-category-post', ['category_id'=>104]) }}">Pendidikan</a>
+                                href="{{ route('home.pk.pp') }}">Pemberdayaan perempuan</a>
                             <a class="dropdown-item"
-                                href="{{ route('home.list-category-post', ['category_id'=>105]) }}">Proyek padat
-                                karya</a>
+                                href="{{ route('home.pk.uep') }}">Usaha ekonomi produktif</a>
                             <a class="dropdown-item"
-                                href="{{ route('home.list-category-post', ['category_id'=>106]) }}">Penelitian dan
-                                pelatihan</a>
+                                href="{{ route('home.pk.hkm') }}">Hutan Kemasyarakatan</a>
+                            <a class="dropdown-item"
+                                href="{{ route('home.pk.padatkarya') }}">Padat Karya</a>
+                            <a class="dropdown-item"
+                                href="{{ route('home.pk.pdp') }}">Penelitian dan pelatihan</a>
                         </div>
                     </li>
+                    <li class="nav-item dropdown  @yield('publikasi-active')">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Publikasi
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="{{ route('home.buletin') }}">Bulettin</a>
+                        </div>
+                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -172,7 +174,7 @@
                         </div>
                         <small>&nbsp;</small>
                         <div class="text-center">
-                            <img src="{{ asset('images/img_profile.jpeg') }}" width="150px" height="200px">
+                            <img src="{{ asset('images/direktur-pspsdm.jpeg') }}" width="150px" height="200px">
                         </div>
                         </ul>
                     </div>
@@ -207,7 +209,6 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/scroll.js') }}"></script>
 </body>
 
 </html>

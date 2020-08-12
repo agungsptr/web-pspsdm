@@ -3,9 +3,7 @@
 active
 @endsection
 @section('header')
-<img src="{{ asset('images/hutan.png') }}" class="img-fluid" alt="Responsive image">
-<p>&nbsp;</p>
-<div class="container">
+<div class="container mt-5">
     <h5 class="judul-section text-center" style="font-family:OpenSans-Bold;font-size:25px; font-weight: normal;">
         Pengalaman Proyek</h5><br>
     <div class="garis"></div><br>
