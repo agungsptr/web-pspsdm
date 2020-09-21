@@ -1,7 +1,7 @@
 @extends('layouts.home')
 @section('header')
 {{-- slider --}}
-<img src="https://via.placeholder.com/1500x500?text=Header" class="img-fluid mb-5" alt="Responsive image">
+<img src="https://via.placeholder.com/1700x500?text=Header" class="img-fluid mb-5" alt="Responsive image">
 <p>&nbsp;</p>
 <div class="container">
     <h5 class="judul-section " style="font-family:OpenSans-Bold;font-size:25px; font-weight: normal;">
