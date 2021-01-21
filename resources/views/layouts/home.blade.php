@@ -51,9 +51,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item @yield('home-active')">
-                        <a class="nav-link text-white"
-                            href="{{ route('home.list-category-post', ['category_id'=>107]) }}">Berita <span
-                                class="sr-only">(current)</span></a>
+                        
                     </li>
                     <li class="nav-item dropdown @yield('tentangkami-active')">
                         <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
