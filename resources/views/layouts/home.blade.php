@@ -13,8 +13,11 @@
     <link rel="icon" href="{{ asset('images/pspsdm-logo.png') }}" type="image/x-icon">
     {{-- stysheet --}}
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     {{-- font family --}}
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -53,7 +56,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item @yield('home-active')">
-                        
+
                     </li>
                     <li class="nav-item dropdown @yield('tentangkami-active')">
                         <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
@@ -73,24 +76,16 @@
                             Program kerja
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item"
-                                href="{{ route('home.pk.pertanian') }}">Pertanian</a>
-                            <a class="dropdown-item"
-                                href="{{ route('home.pk.kesehatan') }}">Kesehatan</a>
-                            <a class="dropdown-item"
-                                href="{{ route('home.pk.airbersih') }}">Air bersih</a>
-                            <a class="dropdown-item"
-                                href="{{ route('home.pk.pendidikan') }}">Pendidikan</a>
-                            <a class="dropdown-item"
-                                href="{{ route('home.pk.pp') }}">Pemberdayaan perempuan</a>
-                            <a class="dropdown-item"
-                                href="{{ route('home.pk.uep') }}">Usaha ekonomi produktif</a>
-                            <a class="dropdown-item"
-                                href="{{ route('home.pk.hkm') }}">Hutan Kemasyarakatan</a>
-                            <a class="dropdown-item"
-                                href="{{ route('home.pk.padatkarya') }}">Padat Karya</a>
-                            <a class="dropdown-item"
-                                href="{{ route('home.pk.pdp') }}">Penelitian dan pelatihan</a>
+                            <a class="dropdown-item" href="{{ route('home.pk.pertanian') }}">Pertanian</a>
+                            <a class="dropdown-item" href="{{ route('home.pk.kesehatan') }}">Kesehatan</a>
+                            <a class="dropdown-item" href="{{ route('home.pk.airbersih') }}">Air bersih</a>
+                            <a class="dropdown-item" href="{{ route('home.pk.pendidikan') }}">Pendidikan</a>
+                            <a class="dropdown-item" href="{{ route('home.pk.pp') }}">Pemberdayaan perempuan</a>
+                            <a class="dropdown-item" href="{{ route('home.pk.uep') }}">Peternakan</a>
+                            <a class="dropdown-item" href="{{ route('home.pk.hkm') }}">Hutan Kemasyarakatan</a>
+                            <a class="dropdown-item" href="{{ route('home.pk.padatkarya') }}">Padat Karya</a>
+                            <a class="dropdown-item" href="{{ route('home.pk.pma') }}">Pemberdayaan Masyarakat Adat</a>
+                            <a class="dropdown-item" href="{{ route('home.pk.pdp') }}">Penelitian dan pelatihan</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown  @yield('publikasi-active')">
@@ -102,7 +97,7 @@
                             <a class="dropdown-item" href="{{ route('home.buletin') }}">Bulettin</a>
                         </div>
                     </li>
-                    
+
                 </ul>
             </div>
         </div>
