@@ -1,7 +1,8 @@
 @extends('layouts.home')
 
 @section('header')
-<img src="https://via.placeholder.com/1500x500?text=Header" class="img-fluid mb-5" alt="Responsive image">
+<img src="{{ asset('images/pemberdayaanperempuan\slider/1.jpg') }}" class="d-block w-100" alt="...">
+
 {{-- content --}}
 <h1 class="mb-3 text-center" style="font-weight: bold">Program Pemberdayaan Perempuan</h1>
 <div class="garis mb-5"></div>
