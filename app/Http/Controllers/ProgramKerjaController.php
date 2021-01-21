@@ -35,7 +35,7 @@ class ProgramKerjaController extends Controller
 
     public function UsahaEkonomiProduktif()
     {
-        return view('home.program-kerja.usahaekonomi');
+        return view('home.program-kerja.peternakan');
     }
 
     public function HutanKemasyarakatan()
@@ -51,5 +51,10 @@ class ProgramKerjaController extends Controller
     public function PenelitianDanPelatihan()
     {
         return view('home.program-kerja.pelatihanpenelitian');
+    }
+
+    public function PemberdayaanAdat()
+    {
+        return view('home.program-kerja.pemberdayaanadat');
     }
 }

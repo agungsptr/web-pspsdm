@@ -1,9 +1,37 @@
 @extends('layouts.home')
 
 @section('header')
-<img src="https://via.placeholder.com/1500x500?text=Header" class="img-fluid mb-5" alt="Responsive image">
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{{ asset('images/kesehatan/slider/1.jpg') }}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{{ asset('images/kesehatan/slider/2.jpg') }}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{{ asset('images/kesehatan/slider/3.jpg') }}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{{ asset('images/kesehatan/slider/4.jpg') }}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{{ asset('images/kesehatan/slider/5.jpg') }}" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
+</div>
+
 {{-- content --}}
-<h1 class="mb-3 text-center" style="font-weight: bold">Program Kesehatan</h1>
+<h1 class="mt-5 mb-3 text-center" style="font-weight: bold">Program Kesehatan</h1>
 <div class="garis mb-5"></div>
 <div id="carouselExampleControls" class="carousel slide bg-green mb-3 p-5" data-ride="carousel">
     <div class="carousel-inner">

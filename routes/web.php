@@ -59,6 +59,7 @@ Route::get('usaha-ekonomi-produktif', 'ProgramKerjaController@UsahaEkonomiProduk
 Route::get('hutan-kemasyarakatan','ProgramKerjaController@HutanKemasyarakatan')->name('home.pk.hkm');
 Route::get('padat-karya', 'ProgramKerjaController@PadatKarya')->name('home.pk.padatkarya');
 Route::get('penelitian-dan-pelatihan', 'ProgramKerjaController@PenelitianDanPelatihan')->name('home.pk.pdp');
+Route::get('pemberdayaan-masyarakat-adat', 'ProgramKerjaController@PemberdayaanAdat')->name('home.pk.pma');
 
 
 // mungkin berubah
