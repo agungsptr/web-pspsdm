@@ -151,5 +151,50 @@
             responsible for managing the project activities and post-project sustainability.</p>
     </div>
 
+    <div class="card mb-3 shadow">
+        <h6 class="mb-3 mt-3 ml-2 card-title" style="font-weight: bold">Program Air Bersih Untuk Lokasi</h6>
+        <div id="carouselExampleControls" class="card-body carousel slide bg-transparent" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="card-deck">
+                        <div class="card">
+                            <img class="card-img-top"
+                                src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top"
+                                src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top"
+                                src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top"
+                                src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top"
+                                src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
+                                alt="Card image cap">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- previus and next --}}
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
 </div>
 @endsection
