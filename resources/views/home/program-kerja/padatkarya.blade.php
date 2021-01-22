@@ -22,7 +22,7 @@
 
 {{-- content --}}
 <h1 class="mb-3 mt-5 text-center" style="font-weight: bold">Program Padat Karya</h1>
-<h1 class="mb-3 text-center" style="font-weight: bold; font-style: italic">Labor Intensive Program</h1>
+<h2 class="mb-3 text-center" style="font-weight: bold; font-style: italic">Labor Intensive Program</h2>
 <div class="garis mb-5"></div>
 
 <div id="carouselExampleControls2" class="carousel slide bg-green mb-3 p-5" data-ride="carousel">
