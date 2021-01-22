@@ -23,43 +23,95 @@
 {{-- content --}}
 <h1 class="mb-3 mt-5 text-center" style="font-weight: bold">Program Padat Karya</h1>
 <div class="garis mb-5"></div>
-<div id="carouselExampleControls" class="carousel slide bg-green mb-3 p-5" data-ride="carousel">
+
+<div id="carouselExampleControls2" class="carousel slide bg-green mb-3 p-5" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="card-deck">
                 <div class="card">
-                    <img class="card-img-top" src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                        alt="Card image cap">
+                    <img class="d-block" src="{{ asset('images/padatkarya/1.png') }}" alt="Card image cap"
+                    height="290cm">
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                        alt="Card image cap">
+                    <img class="card-img-top" src="{{ asset('images/padatkarya/2.png') }}" alt="Card image cap"
+                    height="290cm">
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                        alt="Card image cap">
+                    <img class="card-img-top" src="{{ asset('images/padatkarya/3.jpg') }}" alt="Card image cap"
+                        height="290cm">
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                        alt="Card image cap">
+                    <img class="card-img-top" src="{{ asset('images/padatkarya/4.jpg') }}" alt="Card image cap"
+                        height="290cm">
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                        alt="Card image cap">
+                    <img class="card-img-top" src="{{ asset('images/padatkarya/5.jpg') }}" alt="Card image cap"
+                        height="290cm">
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="card-deck">
+                <div class="card">
+                    <img class="d-block" src="{{ asset('images/padatkarya/7.jpg') }}" alt="Card image cap"
+                    height="290cm">
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="{{ asset('images/padatkarya/8.jpg') }}" alt="Card image cap"
+                    height="290cm">
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="{{ asset('images/padatkarya/11.jpg') }}" alt="Card image cap"
+                    height="290cm">
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="{{ asset('images/padatkarya/12.jpg') }}" alt="Card image cap"
+                    height="290cm">
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="{{ asset('images/padatkarya/13.jpg') }}" alt="Card image cap"
+                    height="290cm">
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="card-deck">
+                <div class="card">
+                    <img class="d-block" src="{{ asset('images/padatkarya/12.jpg') }}" alt="Card image cap"
+                    height="290cm">
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="{{ asset('images/padatkarya/13.jpg') }}" alt="Card image cap"
+                    height="290cm">
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="{{ asset('images/padatkarya/14.jpg') }}" alt="Card image cap"
+                    height="290cm">
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="{{ asset('images/padatkarya/15.png') }}" alt="Card image cap"
+                    height="290cm">
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="{{ asset('images/padatkarya/16.png') }}" alt="Card image cap"
+                    height="290cm">
                 </div>
             </div>
         </div>
     </div>
     {{-- previus and next --}}
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
 </div>
+
 {{-- content --}}
 <div class="container" style="font-family: 'Montserrat', sans-serif;">
     <div class="p text-justify mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, nostrum.
