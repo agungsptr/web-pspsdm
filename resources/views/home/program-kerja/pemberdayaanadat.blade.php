@@ -19,6 +19,8 @@
 
 {{-- content --}}
 <h1 class="mb-3 mt-5 text-center" style="font-weight: bold">Pemberdayaan Masyarakat Adat</h1>
+<h1 class="mb-3 text-center" style="font-weight: bold; font-style: italic">Indigenous Community Empowerment Program
+</h1>
 <div class="garis mb-5"></div>
 
 <div id="carouselExampleControls2" class="carousel slide bg-green mb-3 p-5" data-ride="carousel">
@@ -27,11 +29,11 @@
             <div class="card-deck">
                 <div class="card">
                     <img class="d-block" src="{{ asset('images/pemberdayaanadat/1.jpg') }}" alt="Card image cap"
-                    height="290cm">
+                        height="290cm">
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('images/pemberdayaanadat/2.jpg') }}" alt="Card image cap"
-                    height="290cm">
+                        height="290cm">
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('images/pemberdayaanadat/3.jpg') }}" alt="Card image cap"
@@ -52,23 +54,23 @@
             <div class="card-deck">
                 <div class="card">
                     <img class="d-block" src="{{ asset('images/pemberdayaanadat/6.jpg') }}" alt="Card image cap"
-                    height="290cm">
+                        height="290cm">
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('images/pemberdayaanadat/7.jpg') }}" alt="Card image cap"
-                    height="290cm">
+                        height="290cm">
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('images/pemberdayaanadat/8.jpg') }}" alt="Card image cap"
-                    height="290cm">
+                        height="290cm">
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('images/pemberdayaanadat/9.jpg') }}" alt="Card image cap"
-                    height="290cm">
+                        height="290cm">
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('images/pemberdayaanadat/10.jpg') }}" alt="Card image cap"
-                    height="290cm">
+                        height="290cm">
                 </div>
             </div>
         </div>
@@ -77,23 +79,23 @@
             <div class="card-deck">
                 <div class="card">
                     <img class="d-block" src="{{ asset('images/pemberdayaanadat/11.jpg') }}" alt="Card image cap"
-                    height="290cm">
+                        height="290cm">
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('images/pemberdayaanadat/12.jpg') }}" alt="Card image cap"
-                    height="290cm">
+                        height="290cm">
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('images/pemberdayaanadat/13.jpg') }}" alt="Card image cap"
-                    height="290cm">
+                        height="290cm">
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('images/pemberdayaanadat/10.jpg') }}" alt="Card image cap"
-                    height="290cm">
+                        height="290cm">
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('images/pemberdayaanadat/8.jpg') }}" alt="Card image cap"
-                    height="290cm">
+                        height="290cm">
                 </div>
             </div>
         </div>
@@ -111,67 +113,27 @@
 
 {{-- content --}}
 <div class="container" style="font-family: 'Montserrat', sans-serif;">
-    <div class="p text-justify mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, nostrum.
-        Possimus
-        quod quae,
-        earum et animi nulla, pariatur repellendus debitis error saepe non numquam quidem repudiandae modi quaerat,
-        deleniti quisquam?<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem pariatur iusto
-            dolorem iste, ex reprehenderit officia quod recusandae. Ullam dolorem quasi nulla necessitatibus velit odit
-            deleniti vero eius enim ipsa?<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolore
-                placeat mollitia excepturi voluptatum, est officiis quos veritatis ullam voluptates, quibusdam ipsa
-                consequuntur eveniet ea sunt veniam reiciendis labore totam?</p>
-            deleniti vero eius enim ipsa?<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolore
-                placeat mollitia excepturi voluptatum, est officiis quos veritatis ullam voluptates, quibusdam ipsa
-                consequuntur eveniet ea sunt veniam reiciendis labore totam?</p>
-        </p>
+    <div class="p text-justify mb-5" style="font-weight: bold">
+        <p>Komunitas Adat Desa Gumantar merupakan salah satu dari 23 komunitas adat yang ada di Kabupaten Lombok Utara.
+            Mereka tinggal berbatasan dengan kawasan hutan Gunung Rinjani. Dalam kehidupan sehari-hari, komunitas adat
+            ini memegang teguh pranata adat dan awiq-awiq adat yang diwariskan secara turun menurun. Sebagian besar mata
+            pencaharian mereka adalah petani, dengan pola pertanian tadah hujan.</p>
+        <p>PSPSDM memberikan layanan dampingan pengelolaan pertanian lahan kering dan budidaya ternak lebah untuk petani
+            dan pengolahan hasil usaha tani untuk perempuan. Mereka mendapatkan pelatihan dan pendamping intensif dari
+            PSPSDM, termasuk peningkatan kesetaraan Gender.</p>
+        <p>Donor progam yang telah memberikan dukungan program Pemberdayaan Perempuan adalah Green Prosperity Project
+            Facility - MCA Indonesia.</p>
     </div>
-
-    <div class="card mb-3 shadow">
-        <h6 class="mb-3 mt-3 ml-2 card-title" style="font-weight: bold">Pemberdayaan Masyarakat Adat</h6>
-        <p class="card-text ml-3">This is a longer card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
-        <div id="carouselExampleControls" class="card-body carousel slide bg-transparent" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="card-deck">
-                        <div class="card">
-                            <img class="card-img-top"
-                                src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top"
-                                src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top"
-                                src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top"
-                                src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top"
-                                src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                                alt="Card image cap">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{-- previus and next --}}
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
+    <div class="text-justify" style="font-style: italic">
+        <p>Indigenous community in Gumantar Village is one of the 23 Indigenous communities in North Lombok Regency.
+            They live in the border of Rinjani Mountain forest areas. The community adheres to customary institutions
+            and awiq-awiq (local wisdom) in their daily life that are inherited for generations. Most of them work as
+            farmer with rainfed agricultural patterns.</p>
+        <p>PSPSDM provides services in dry land agricultural and beekeeping management for farmers and productive
+            economic business activities of farming yield processing for women. They receive intensive training and
+            assistance from PSPSDM including gender equality improvement.</p>
+        <p>The program donator that has supported the women empowermwnt program of PSPSDM is Green Prosperity Project
+            Facility - MCA Indonesia.</p>
     </div>
 
 </div>
