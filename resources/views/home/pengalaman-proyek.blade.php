@@ -5,7 +5,7 @@ active
 @section('header')
 <div class="container mt-5">
     <h5 class="judul-section text-center" style="font-family:OpenSans-Bold;font-size:25px; font-weight: normal;">
-        Pengalaman Proyek</h5><br>
+        Pengalaman Proyek</h5>
     <div class="garis"></div><br>
     <div class="font-body font-justify"
         style="font-family:OpenSans-Regular;font-size:15px; font-weight: normal;  text-align: justify;">

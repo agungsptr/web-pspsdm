@@ -33,6 +33,7 @@
     </a>
 </div>
 {{-- content --}}
+<br>
 <h1 class="mb-3 text-center" style="font-weight: bold">Program Pertanian</h1>
 <div class="garis mb-5"></div>
 <div id="carouselExampleControls" class="carousel slide bg-green mb-3 p-5" data-ride="carousel">
