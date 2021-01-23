@@ -3,7 +3,7 @@
 @section('header')
 <img src="{{ asset('images/hutan\slider/1.jpg') }}" class="d-block w-100" alt="...">
 {{-- content --}}
-<h1 class="mb-3 text-center" style="font-weight: bold">Program Hutan Kemasyarakatan</h1>
+<h1 class="mb-3 mt-5 text-center" style="font-weight: bold">Program Hutan Kemasyarakatan</h1>
 <h1 class="mb-3 text-center" style="font-weight: bold; font-style: italic">Social Forestry Program</h1>
 <div class="garis mb-5"></div>
 <div id="carouselExampleControls2" class="carousel slide bg-green mb-3 p-5" data-ride="carousel">
@@ -42,15 +42,15 @@
                         height="290cm">
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="{{ asset('images/hutan/8.jpg') }}" alt="Card image cap"
-                        height="290cm">
-                </div>
-                <div class="card">
                     <img class="card-img-top" src="{{ asset('images/hutan/9.jpg') }}" alt="Card image cap"
                         height="290cm">
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('images/hutan/10.jpg') }}" alt="Card image cap"
+                        height="290cm">
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="{{ asset('images/hutan/11.jpg') }}" alt="Card image cap"
                         height="290cm">
                 </div>
             </div>
@@ -59,11 +59,7 @@
         <div class="carousel-item">
             <div class="card-deck">
                 <div class="card">
-                    <img class="d-block" src="{{ asset('images/hutan/11.jpg') }}" alt="Card image cap" height="290cm">
-                </div>
-                <div class="card">
-                    <img class="card-img-top" src="{{ asset('images/hutan/12.jpg') }}" alt="Card image cap"
-                        height="290cm">
+                    <img class="d-block" src="{{ asset('images/hutan/12.jpg') }}" alt="Card image cap" height="290cm">
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('images/hutan/1.jpg') }}" alt="Card image cap"
@@ -75,6 +71,10 @@
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('images/hutan/3.jpg') }}" alt="Card image cap"
+                        height="290cm">
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="{{ asset('images/hutan/4.jpg') }}" alt="Card image cap"
                         height="290cm">
                 </div>
             </div>
