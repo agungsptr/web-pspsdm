@@ -28,59 +28,66 @@
 
 {{-- content --}}
 <h1 class="mt-5 mb-3 text-center" style="font-weight: bold">Program Pendidikan</h1>
+<h2 class="mb-3 text-center" style="font-weight: bold; font-style: italic">Education Programs</h2>
 <div class="garis mb-5"></div>
-<div id="carouselExampleControls" class="carousel slide bg-green mb-3 p-5" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="card-deck">
-                <div class="card">
-                    <img class="card-img-top" src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                        alt="Card image cap">
-                </div>
-                <div class="card">
-                    <img class="card-img-top" src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                        alt="Card image cap">
-                </div>
-                <div class="card">
-                    <img class="card-img-top" src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                        alt="Card image cap">
-                </div>
-                <div class="card">
-                    <img class="card-img-top" src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                        alt="Card image cap">
-                </div>
-                <div class="card">
-                    <img class="card-img-top" src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                        alt="Card image cap">
-                </div>
-            </div>
-        </div>
-    </div>
-    {{-- previus and next --}}
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
+
+
 {{-- content --}}
 <div class="container" style="font-family: 'Montserrat', sans-serif;">
-    <div class="p text-justify mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, nostrum.
-        Possimus
-        quod quae,
-        earum et animi nulla, pariatur repellendus debitis error saepe non numquam quidem repudiandae modi quaerat,
-        deleniti quisquam?<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem pariatur iusto
-            dolorem iste, ex reprehenderit officia quod recusandae. Ullam dolorem quasi nulla necessitatibus velit odit
-            deleniti vero eius enim ipsa?<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolore
-                placeat mollitia excepturi voluptatum, est officiis quos veritatis ullam voluptates, quibusdam ipsa
-                consequuntur eveniet ea sunt veniam reiciendis labore totam?</p>
-            deleniti vero eius enim ipsa?<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolore
-                placeat mollitia excepturi voluptatum, est officiis quos veritatis ullam voluptates, quibusdam ipsa
-                consequuntur eveniet ea sunt veniam reiciendis labore totam?</p>
+    <div class="p text-justify mb-5" style="font-weight: bold">
+        <p>Dalam rangka ikut berkontribuss dalam pembangunan sumberdaya manusia berkelanjutan di Indonesia, PSPSDM telah
+            melakukan beberapa program terkait pendidikan formal dan non- formal diantaranya :</p>
+        <p>
+            <ul id="datalist" class="point-list">
+                <li class="point-list"><span style="color: #000000;">Meningkatan akses serta pemerataan pendidikan
+                        melalui pembangunan sarana dan prasarana Sekolah Dasar serta Pendidikan Anak Usia Dini
+                        (PAUD).</span>
+                </li>
+                <li class="point-list"><span style="color: #000000;">Peningkatan Minat Baca melalui Pengembangan
+                        Perpustakaan Sekolah dan Perpustakaan Masyarakat.</span>
+                </li>
+                <li class="point-list"><span style="color: #000000;">Pengembangan kurikulum sekolah alam PAUD.</span>
+                </li>
+                <li class="point-list"><span style="color: #000000;">Pendidikan Keaksaraan Fungsional (PKF) untuk
+                        Perempuan. Pendidikan Keaksaraan dijadikan pintuk masuk untuk meningkatkan kemampuan usaha
+                        ekonomi kelompok perempuan (Kegiatan Fungsional) melalui pengembangan kegiatan usaha ekonomi
+                        produktif.</span>
+                </li>
+            </ul>
         </p>
+        <p>Untuk meningkatkan kapasitas Kelembagaan Komite Sekolah, guru, pengelola perpustakaan sekolah dan masyarakat
+            serta Kelompok Perempuan PKF dan keberlanjutan program, PSPSDM memberikan layanan pelatihan dan pendampingan
+            intensif.</p>
+        <p>Donor progam yang telah memberikan dukungan program Pendidikan adalah Dinas Perpustakaan dan Kearsipan
+            Propinsi Nusa Tenggara Barat bekerjasama dengan World Bank, Access-AusAid dan Program Grassroots Pemerintah
+            Jepang.</p>
+    </div>
+    <div class="mb-5 text-justify" style="font-style: italic">
+        <p>In order to contribute to the development of sustainable human resources in Indonesia, PSPSDM has caried out
+            several programs related to formal and non-formal education, including : </p>
+        <p>
+            <ul id="datalist" class="point-list">
+                <li class="point-list">Increase access and equity of education through
+                    development of facilities and infrastructures of primary schools and early child education
+                    (PAUD).
+                </li>
+                <li class="point-list">Increased reading interest through the development of school libraries and public
+                    libraries
+                </li>
+                <li class="point-list">Development of natural school curriculum of PAUD.
+                </li>
+                <li class="point-list">4. Functional Literacy Education for women. The literacy education is dedicated
+                    as an entry to increase economic business skills of women groups (functional activities) through the
+                    development of productive economic business activities.
+                </li>
+            </ul>
+        </p>
+        <p>To strenthening institutional capacity of the school committee, teachers, school and public library
+            management, and women groups of Functional Literacy Education, PSPSDM provide services of training and
+            intensive assistance.</p>
+        <p>The program donator that has supported the education program of PSPSDM are Regional Office of Libraries and
+            Archives of West Nusa Tenggara Province in cooperation with the World Bank, Access-AusAid and Grassroots
+            Program the Government of Japan.</p>
     </div>
 
     <div class="card mb-3 shadow">
