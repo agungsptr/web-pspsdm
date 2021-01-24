@@ -277,7 +277,7 @@
     <script src="{{asset('vendor/AdminLTE/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
     <!-- AdminLTE App -->
     <script src="{{asset('vendor/AdminLTE/dist/js/adminlte.js')}}"></script>
-    
+
     <script src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
 
     <script type="text/javascript" charset="utf8" src="{{ asset('vendor/DataTables/datatables.js') }}"></script>
@@ -286,19 +286,16 @@
 
     <script>
         function changeAction(val){
-            if (val == 101 || val == 102) {
-                document.getElementById("ph1").disabled = true;
-                document.getElementById("ph2").disabled = true;
-                document.getElementById("ph3").disabled = true;
-                document.getElementById("file").disabled = true;
-                document.getElementById("file_cover").disabled = true;
-            } else {
+            if (val == 100) {
+                document.getElementById("photos").disabled = true;
                 document.getElementById("ph1").disabled = false;
                 document.getElementById("ph2").disabled = false;
                 document.getElementById("ph3").disabled = false;
-                document.getElementById("file").disabled = false;
-                document.getElementById("file_cover").disabled = false;
-                document.getElementById("photos").disabled = true;
+            } else {
+                document.getElementById("photos").disabled = false;
+                document.getElementById("ph1").disabled = true;
+                document.getElementById("ph2").disabled = true;
+                document.getElementById("ph3").disabled = true;
             }
         }
     </script>

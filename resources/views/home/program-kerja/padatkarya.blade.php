@@ -151,39 +151,46 @@
             responsible for managing the project activities and post-project sustainability.</p>
     </div>
 
+    @foreach ($posts as $post)
     <div class="card mb-3 shadow">
-        <h6 class="mb-3 mt-3 ml-2 card-title" style="font-weight: bold">Program Air Bersih Untuk Lokasi</h6>
+        <h6 class="mb-3 mt-3 ml-2 card-title" style="font-weight: bold">{{$post->title}}</h6>
+        @if(count(json_decode($post->content_photos)) > 0)
         <div id="carouselExampleControls" class="card-body carousel slide bg-transparent" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="card-deck">
-                        <div class="card">
-                            <img class="card-img-top"
-                                src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top"
-                                src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top"
-                                src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top"
-                                src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top"
-                                src="https://via.placeholder.com/125/000000/FFFFFF/?text=IPaddress.net"
-                                alt="Card image cap">
+                @for ($i = 0; $i < count(json_decode($post->content_photos)); $i +=4)
+                    <div class="carousel-item {{$i < 4 ? 'active':''}}">
+                        <div class="card-deck">
+                            @isset(json_decode($post->content_photos)[$i])    
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="{{ asset('storage/'.json_decode($post->content_photos)[$i]) }}"
+                                    alt="Card image cap" height="240px">
+                            </div>
+                            @endisset
+                            @isset(json_decode($post->content_photos)[$i+1])
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="{{ asset('storage/'.json_decode($post->content_photos)[$i+1]) }}"
+                                    alt="Card image cap" height="240px">
+                            </div>
+                            @endisset
+                            @isset(json_decode($post->content_photos)[$i+2])  
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="{{ asset('storage/'.json_decode($post->content_photos)[$i+2]) }}"
+                                    alt="Card image cap" height="240px">
+                            </div>
+                            @endisset
+                            @isset(json_decode($post->content_photos)[$i+3])   
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="{{ asset('storage/'.json_decode($post->content_photos)[$i+3]) }}"
+                                    alt="Card image cap" height="240px">
+                            </div>
+                            @endisset
                         </div>
                     </div>
-                </div>
+                @endfor
             </div>
             {{-- previus and next --}}
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -195,6 +202,9 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+        @endif
     </div>
+    @endforeach
+    {{$posts->links()}}
 </div>
 @endsection
