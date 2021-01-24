@@ -35,8 +35,11 @@
 {{-- <img src={{ asset('images/home/1.jpg') }} class="img-fluid" alt="Responsive image"> --}}
 <p>&nbsp;</p>
 <div class="container">
-    <h5 class="judul-section " style="font-family:OpenSans-Bold;font-size:25px; font-weight: normal;">
-        <strong>Berita</strong></h5>
+    <h5 class="judul-section " style="font-size:25px; font-weight: normal;">
+        <a style="text-decoration: none; color: black" href="{{ route('home.list-category-post', ['category_id'=>100]) }}">
+            <strong>Berita</strong>
+        </a>
+    </h5>
     <div class="garis mb-5"></div>
 
     {{-- caraousel Content--}}
@@ -98,7 +101,7 @@
     </div>
 
     {{-- Work Area Article --}}
-    <h5 class="judul-section" style="font-family:OpenSans-Bold;font-size:25px; font-weight: normal;">
+    <h5 class="judul-section" style="font-size:25px; font-weight: normal;">
         <strong>Lokasi Kerja</strong></h5>
     <div class="garis mb-5"></div>
     <img src="https://via.placeholder.com/1500x500?text=Lokasi Kerja" class="img-fluid mb-5" alt="Responsive image">

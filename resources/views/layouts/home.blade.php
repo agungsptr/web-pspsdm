@@ -88,18 +88,21 @@
                             <a class="dropdown-item" href="{{ route('home.pk.pdp') }}">Penelitian dan pelatihan</a>
                         </div>
                     </li>
-                    {{-- <li class="nav-item dropdown  @yield('publikasi-active')">
+                    <li class="nav-item dropdown  @yield('publikasi-active')">
                         <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
                             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Publikasi
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        {{-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="{{ route('home.buletin') }}">Bulettin</a>
-                        </div>
-                    </li> --}}
-
-                </ul>
+            </div> --}}
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{{ route('home.list-category-post', ['category_id'=>100]) }}">Berita</a>
             </div>
+            </li>
+
+            </ul>
+        </div>
         </div>
     </nav>
 
@@ -114,8 +117,7 @@
                     <div class="col-lg-6 col-md-3 col-lg mb-5 mb-lg-0">
                         <ul class="list-group list-group-flush text-white">
                             <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-20px-bottom font-weight-600 follow-us font-body-title"
-                                style="font-size:16px; font-weight: normal;"><span
-                                    style="color: white">Informasi</span>
+                                style="font-size:16px; font-weight: normal;"><span style="color: white">Informasi</span>
                             </div>
                             <small>&nbsp;</small>
                             <li class="list-unstyled">
@@ -146,8 +148,7 @@
                     </div>
 
                     <div class="col-lg-4 col-md-3 col-lg mb-5 mb-lg-0">
-                        <ul class="list-group list-group-flush text-white"
-                            style="font-size:16px; font-weight: normal;">
+                        <ul class="list-group list-group-flush text-white" style="font-size:16px; font-weight: normal;">
                             {{-- <li class="list-unstyled">
                                 <a href="{{ route('home.gallery') }}" style="color: white">GALERY</a>
                             </li> --}}
@@ -164,8 +165,8 @@
 
                     <div class="col-lg-2 col-md-3 col-lg mb-5 mb-lg-0 text-center">
                         <div class="widget-title alt-font text-white text-small text-medium-gray text-uppercase margin-20px-bottom font-weight-600 follow-us font-body-title"
-                            style="font-size:16px; font-weight: normal;"><span
-                                style="color: white">DIREKTUR PSPSDM</span>
+                            style="font-size:16px; font-weight: normal;"><span style="color: white">DIREKTUR
+                                PSPSDM</span>
                         </div>
                         <small>&nbsp;</small>
                         <div class="text-center">

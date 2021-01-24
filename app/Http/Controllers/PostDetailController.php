@@ -24,7 +24,7 @@ class PostDetailController extends Controller
     {
         $category = Category::where('category', $category)->get()->first();
         if (isset($category)) {
-            $posts = Content::where('category_id', $category->id)->get();
+            $posts = Content::where('category_id', $category->id)->paginate(10);
             return view('home.post.list', [
                 'posts' => $posts,
                 'category' => $category

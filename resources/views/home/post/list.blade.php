@@ -1,9 +1,9 @@
 @extends('layouts.home')
 
 @section('header')
-<img src="https://via.placeholder.com/1500x500?text=Header" class="img-fluid mb-5" alt="Responsive image">
+{{-- <img src="https://via.placeholder.com/1500x500?text=Header" class="img-fluid mb-5" alt="Responsive image"> --}}
 {{-- content --}}
-<div class="container">
+<div class="container mt-5">
     <h5 class="font-body font-justify"><span style="color:grey">
             <span class="font-body-title" style="font-size: 18pt;">
                 <strong>"{{$category->category}}"</strong>
