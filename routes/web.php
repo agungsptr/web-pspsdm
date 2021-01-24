@@ -41,7 +41,7 @@ Route::group(['prefix' => 'getdata'], function () {
 
 //profile page
 Route::get('/', function () {
-    $posts = Content::where("category_id", 107)->get()->take(3);
+    $posts = Content::where("category_id", 100)->get()->take(3);
     return view('home.index', ["posts" => $posts]);
 })->name('home');
 Route::view('sejarah', 'home.sejarah')->name('home.sejarah');

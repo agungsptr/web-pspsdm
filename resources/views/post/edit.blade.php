@@ -127,12 +127,12 @@ active
             </div>
             <div class="col-sm-6">
                 Cover Dokumen
+                <input type="file" class="form-control mb-2" name="cover_doc" accept="image/*">
                 @if ($post->cover_doc)
                 <a href="{{ asset('storage/' . $post->cover_doc) }}">
                     <img src="{{ asset('storage/' . $post->cover_doc) }}" alt="cover_img" width="200px">
                 </a>
                 @endif
-                <input type="file" class="form-control" name="cover_doc" accept="image/*">
             </div>
         </div>
     </div>

@@ -1,9 +1,6 @@
 @extends('layouts.home')
 
 @section('header')
-{{-- slider --}}
-<img src="{{ asset('images/hutan.png') }}" class="img-fluid mb-5" alt="Responsive image">
-
 <div class="container">
 
 
@@ -53,17 +50,23 @@
     {{-- content body --}}
 
     <p class="font-body mt-4 text-justify" style="color: #000000; font-size: 14pt">
-        {{print_r($post->content)}}</p>
+        @php
+            print_r($post->content)
+        @endphp
+    </p>
 
 
 
     <div class="mb-5">
         @if (!empty($post->document))
         <a href="{{ asset('storage/'.$post->document) }}" download>
+            <div class="mb-2">
+                <img src="{{ asset('storage/'.$post->cover_doc) }}" width="200px" alt="">
+            </div>
             <li class="media">
                 <div class="media-body">
                     <i class="fas fa-file-pdf fa-2x mr-3" style="color: red"></i>
-                    <span class="mt-0 mb-1 text-black" style="font-size: 14pt">{{$post->title}}</span>
+                    <span class="mb-1 text-black" style="font-size: 14pt">{{$post->title}}</span>
                 </div>
             </li>
         </a>
